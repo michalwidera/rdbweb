@@ -11,7 +11,7 @@ header:
   overlay_color: "#333"
 ---
 
-This is not about IDEA from Jetbrains - but they did help.
+This is not about IDEA from Jetbrains - but they did help and stopped.
 
 Some ideas are worth spreading.
 
