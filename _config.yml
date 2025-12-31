@@ -98,6 +98,9 @@ footer:
     - label: "Homepage"
       icon: "fas fa-fw fa-link"
       url: "https://widera.com.pl"
+    - label: "Linkedin"
+      icon: "fa fa-linkedin-square
+      url: "https://www.linkedin.com/in/michalwidera/"
 
 
 defaults:
