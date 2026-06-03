@@ -1,2 +1,2 @@
-# retractordb.com
-Webpage Retractordb source code
+# RetractorDB website source code
+Source code for the RetractorDB website.

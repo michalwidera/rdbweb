@@ -4,17 +4,15 @@ classes:
   - wide
 title: "About"
 permalink: /about/
-excerpt: "RetractorDB is open for People. This work main intention was to impove quality of future coding and software."
+excerpt: "RetractorDB is open for People. This work's main intention was to improve quality of future code and software."
 header:
   overlay_color: "#333"
 ---
 
-RetractorDB.com is a web page created by Michal Widera.
-RetractorDB is a Data Processing System created by Michal Widera and published as source code with open source MIT License on github.
-Both RetractorDB.com and RetractorDB have same MIT License.
+RetractorDB.com is a website created by Michal Widera.
+RetractorDB is a data processing system created by Michal Widera and published as open-source software under the MIT License on GitHub.
+Both RetractorDB.com and RetractorDB are distributed under the MIT License.
 
-
-According to MIT License rules ...
 
 License
 -------
