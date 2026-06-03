@@ -14,7 +14,7 @@ feature_row:
     excerpt: "This system offers unique method of data processing. Using a declarative language, the system creates query execution plans based on __number theory__ equations."
   - image_path: /assets/images/splash-2.jpg
     image_caption: "Photos by Tomasz Widera"
-    title: "What does “different“ actually mean?"
+    title: 'What does “different” actually mean?'
     excerpt: "This is a repetitive question after the first contact. In short: This system can do what others cannot. So ... are you ready for __rocket science__?"
     url: /different/
     btn_label: "Read more"
@@ -40,7 +40,7 @@ feature_row3:
     excerpt: '
 Some ideas are worth spreading.
 
-Some shouldn't be ...
+Some shouldn''t be ...
 
 When we encounter the first difficulties, we usually reject ideas that are difficult to understand from the beginning.
 
