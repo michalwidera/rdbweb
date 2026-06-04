@@ -1,6 +1,6 @@
 main:
     - title: "/Doc"
-      url: https://retractordb.gitbook.io/retractordb-docs/
+      url: https://dokumentacja.retractordb.com/
     - title: "Download"
       url: https://github.com/michalwidera/retractordb
     - title: "About"
