@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }} — RetractorDB</title>
+<meta name="description" content="{{ page.excerpt | default: site.description }}">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ page.title }} — RetractorDB">
+<meta property="og:description" content="{{ page.excerpt | default: site.description }}">
+<meta property="og:image" content="{{ site.url }}/assets/og-card.png">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@widera_michal">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;1,300;1,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <svg class="mark" viewBox="0 0 512 512" aria-hidden="true">
+      <circle class="mk-ink" cx="36" cy="336" r="17"/><circle class="mk-blue" cx="88" cy="336" r="17"/>
+      <circle class="mk-ink" cx="140" cy="336" r="17"/><circle class="mk-ink" cx="192" cy="336" r="17"/>
+      <circle class="mk-ink" cx="320" cy="302" r="17"/><circle class="mk-ink" cx="376" cy="272" r="17"/>
+      <circle class="mk-ink" cx="432" cy="242" r="17"/>
+      <circle class="mk-blue" cx="320" cy="370" r="17"/><circle class="mk-blue" cx="376" cy="400" r="17"/>
+      <circle class="mk-blue" cx="432" cy="430" r="17"/>
+      <g class="mk-stroke" stroke-width="16" stroke-linecap="round" fill="none">
+        <line x1="256" y1="216" x2="212" y2="318"/>
+        <line x1="256" y1="216" x2="300" y2="318"/>
+        <line x1="256" y1="216" x2="223" y2="136"/>
+        <line x1="256" y1="216" x2="289" y2="136"/>
+        <circle cx="211" cy="106" r="32"/><circle cx="301" cy="106" r="32"/>
+      </g>
+      <circle class="mk-ink" cx="256" cy="216" r="12"/>
+      <circle class="mk-ink" cx="212" cy="318" r="9"/><circle class="mk-ink" cx="300" cy="318" r="9"/>
+    </svg>
+    <span class="wordmark">Retractor<b>DB</b></span>
+    <div class="nav-links">
+      <a href="https://arxiv.org/abs/2607.07730">Paper</a>
+      <a href="https://dokumentacja.retractordb.com">Docs</a>
+      <a href="https://github.com/michalwidera/retractordb">GitHub</a>
+      <a href="/trademark/">Trademark</a>
+    </div>
+  </div>
+</nav>
+
+<div class="pageheader">
+  <div class="pageheader-in">
+    {% if page.eyebrow %}<span class="eyebrow">{{ page.eyebrow }}</span>{% endif %}
+    <h1>{{ page.title }}</h1>
+    {% if page.excerpt %}<p class="lede">{{ page.excerpt }}</p>{% endif %}
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+    {{ content }}
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <span>&copy; 2006&ndash;2026 Michal Widera &middot; MIT license &middot; RetractorDB&reg; (R.332224)</span>
+      <a class="mono" href="https://orcid.org/0000-0002-3578-3792">ORCID 0000-0002-3578-3792</a>
+      <a class="mono" href="https://github.com/michalwidera/retractordb">github.com/michalwidera/retractordb</a>
+      <a class="mono" href="https://arxiv.org/abs/2607.07730">arXiv:2607.07730</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

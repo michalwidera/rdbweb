@@ -1,0 +1,120 @@
+/* RetractorDB — shared site chrome (nav, footer, tokens, header band)
+   Used by every page EXCEPT index.html, which is a self-contained
+   one-file deploy per BRAND.md and keeps its own inline copy of these
+   tokens. Keep both in sync if the palette changes. */
+:root{
+  --paper:#FAFBFD;
+  --panel:#FFFFFF;
+  --ink:#101114;
+  --ink-soft:#494D55;
+  --brand:#6699FF;
+  --brand-text:#3D6FD9;
+  --brand-dark:#2E5CBF;
+  --grid-fine:rgba(102,153,255,0.11);
+  --grid-major:rgba(102,153,255,0.22);
+  --rule:rgba(16,17,20,0.13);
+  --code-bg:#101725;
+  --code-ink:#DCE4F2;
+  --maxw:1060px;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#0B0D10;
+    --panel:#15171C;
+    --ink:#F2F4F7;
+    --ink-soft:#AEB4BE;
+    --brand:#6699FF;
+    --brand-text:#8FB4FF;
+    --brand-dark:#4E82E8;
+    --grid-fine:rgba(102,153,255,0.09);
+    --grid-major:rgba(102,153,255,0.18);
+    --rule:rgba(255,255,255,0.13);
+    --code-bg:#0A0E17;
+    --code-ink:#DCE4F2;
+  }
+  .mark .mk-ink, .mark-footer .mk-ink{fill:#F2F4F7}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,sans-serif;
+  font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;
+}
+a{color:var(--brand-text);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:3px solid var(--brand);outline-offset:2px;border-radius:2px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+code,pre{font-family:"IBM Plex Mono",ui-monospace,monospace}
+
+/* ---------- nav ---------- */
+nav{border-bottom:1px solid var(--rule);background:var(--paper)}
+.nav-in{display:flex;align-items:center;gap:13px;padding:18px 24px;max-width:var(--maxw);margin:0 auto}
+.mark{width:34px;height:34px;flex:none}
+.mark .mk-ink{fill:var(--ink)}
+.mark .mk-blue{fill:var(--brand)}
+.mark .mk-stroke{stroke:var(--ink)}
+.wordmark{font-family:"Ubuntu",sans-serif;font-style:italic;font-weight:500;font-size:21px;color:var(--ink)}
+.wordmark b{color:var(--brand);font-weight:500}
+.nav-links{margin-left:auto;display:flex;gap:26px;font-size:15px;font-weight:500}
+.nav-links a{color:var(--ink-soft)}
+.nav-links a:hover{color:var(--ink);text-decoration:none}
+
+/* ---------- header band (graph paper) ---------- */
+.pageheader{
+  border-bottom:1px solid var(--rule);
+  background:
+    repeating-linear-gradient(to right,  var(--grid-fine) 0 1px, transparent 1px 9px),
+    repeating-linear-gradient(to bottom, var(--grid-fine) 0 1px, transparent 1px 9px),
+    repeating-linear-gradient(to right,  var(--grid-major) 0 1px, transparent 1px 45px),
+    repeating-linear-gradient(to bottom, var(--grid-major) 0 1px, transparent 1px 45px),
+    var(--paper);
+  padding:64px 24px 56px;
+}
+.pageheader-in{max-width:var(--maxw);margin:0 auto}
+.eyebrow{
+  font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:500;
+  letter-spacing:0.08em;text-transform:uppercase;color:var(--brand-text);
+}
+.pageheader h1{
+  font-family:"Ubuntu",sans-serif;font-style:italic;font-weight:500;
+  font-size:clamp(30px,4.6vw,46px);line-height:1.14;
+  letter-spacing:-0.01em;margin:14px 0 12px;max-width:18ch;
+}
+.pageheader .lede{max-width:60ch;color:var(--ink-soft);font-size:18px}
+
+/* ---------- body sections ---------- */
+main{padding:56px 0 8px}
+section{padding:0 0 56px}
+h2{
+  font-family:"Ubuntu",sans-serif;font-style:italic;font-weight:500;
+  font-size:clamp(22px,2.6vw,28px);margin:34px 0 16px;
+}
+h2:first-child{margin-top:0}
+p.body, main p, main li{max-width:66ch;color:var(--ink-soft);margin-bottom:14px}
+main strong{color:var(--ink)}
+main ul, main ol{padding-left:1.3em;margin-bottom:16px}
+main a{font-weight:500}
+
+.equation{
+  font-family:"IBM Plex Mono",monospace;font-size:15px;line-height:1.9;
+  background:var(--panel);border:1px solid var(--rule);border-radius:8px;
+  padding:22px 26px;margin:22px 0;overflow-x:auto;white-space:pre;
+}
+.panel-card{
+  background:var(--panel);border:1px solid var(--rule);border-radius:8px;padding:24px;margin:22px 0;
+}
+.btn{display:inline-block;padding:12px 22px;border-radius:6px;font-weight:600;font-size:15.5px}
+.btn-primary{background:var(--brand-dark);color:#fff}
+.btn-primary:hover{background:#234A9E;text-decoration:none}
+.btn-ghost{border:1.5px solid var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper);text-decoration:none}
+
+footer{padding:44px 0 60px;color:var(--ink-soft);font-size:14.5px;border-top:1px solid var(--rule);margin-top:40px}
+footer .cols{display:flex;flex-wrap:wrap;gap:12px 34px;align-items:center}
+footer .mono{font-family:"IBM Plex Mono",monospace;font-size:13px}
+
+@media (max-width:560px){
+  .nav-links{gap:16px;font-size:14px}
+  .pageheader{padding-top:48px}
+}

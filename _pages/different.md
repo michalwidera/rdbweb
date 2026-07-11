@@ -1,51 +1,76 @@
 ---
-layout: single
+layout: default
+title: "A different approach to time series"
 permalink: /different/
-title: "Different Time Series DB"
-header:
-  overlay_color: "#000"
-  overlay_filter: "0.5"
-  overlay_image: /assets/images/IMG_0758.JPG
-  caption: "Photo credit: Tomasz Widera"
-excerpt: "RetractorDB is the open source time series database"
+eyebrow: "Where it fits"
+excerpt: "How RetractorDB's algebra compares to InfluxDB, Prometheus and OpenTSDB — and where the whole idea of a hobby time-series engine stands today."
 toc: true
 ---
-contents of this page is _work in progress_.
-Page under construction.
 
-# RetractorDB - a different approach to time series processing.
+*This page is a work in progress &mdash; a running report, not a
+finished comparison.*
 
 ## Abstract
 
-This page is an actual report describing work on the following problem: How is RetractorDB different from other solutions? First, we try to find out what we understand by "other solutions" and what we will compare. Then this page shows simple examples of time series processing on the identified systems and how they can actually be done in RetractorDB. Then we present tasks that are hard or impossible to write and process in competitors. Then we will try something opposite — write tasks that are hard or impossible to write in RetractorDB and how easily they can be done in other solutions. In the summary section we will show how to connect to other time series database systems and get benefits from different solutions — how to cooperate and get the best of different approaches.
-
+How is RetractorDB different from other solutions? First we need to
+find what "other solutions" means, then walk through simple processing
+tasks on the identified systems and how they're actually done in
+RetractorDB. Then tasks that are hard or impossible to write in
+competitors &mdash; and, in fairness, the reverse: tasks that are hard
+or impossible in RetractorDB but trivial elsewhere. The summary covers
+how to connect RetractorDB to other time series systems and get the
+benefit of both.
 
 ## Introduction
 
-First, we need to find what time series databases are close to our RetractorDB.
-In a related paper [Data Series Management: Fulfilling the Need for Big Sequence Analytics][KT-2018] we can find reference to [Db-engines page][DB-RANK] with ranking categories. When we narrow our scope to time series dbms we can find actual time series leaders. This page is updated continuously. Method of so called ‘ranking’ is based on mentions in web – methodology is explained on this page.  There is a significant factor in this ranking score called “include secondary database model”. If we turn this checkbox on, we can see systems where time series processing is a secondary or tertiary functionality, and their main application area is NoSQL tasks rather than time series processing problems.
+Using the [db-engines time series ranking][DB-RANK] as a starting
+point &mdash; and reading it alongside [Data Series Management: Fulfilling
+the Need for Big Sequence Analytics][KT-2018] &mdash; I chose **InfluxDB**,
+**Prometheus** and **OpenTSDB** as the comparison set. Kdb+ is
+intentionally skipped: its license doesn't permit publishing benchmarks
+or reports without the vendor's prior written consent.
 
-Based on the db-engines ranking page, I’ve chosen InfluxDB, Prometheus and OpenTSDB. Intentionally skipping Kdb+ due to its strict licensing and closed-source model. Additionally, the Kdb+ license shows that we are not able to make any benchmark or report unless the end user receives express, prior written consent.
+- InfluxDB &mdash; MIT license
+- Prometheus &mdash; Apache 2.0 license
+- OpenTSDB &mdash; LGPL
 
-* InfluxDB is on open source MIT license.
-* Prometheus is on Apache 2.0 license.
-* OpenTSDB is on LGPL
+These are license-friendly products that can be compared and discussed
+openly within the community.
 
-These are license-friendly products that can be compared and promoted within the community.
+RetractorDB currently works only on **regular** time series; general
+time series databases support both regular and irregular series. That
+narrower scope is the trade RetractorDB makes for exactness &mdash; see
+[the idea](/idea/) for why that trade is the point, not a limitation.
 
 ## Time series processing tasks
 
-There are various groups of typical time series processing tasks. The simplest are: show me a histogram of changes or show the average value of an incoming measurement. These are the basics of what we can ask of a typical time series database system.
-Things become more complicated when someone asks: how much data do you want to use? If you accidentally touch infinity, you start to doubt what "simple" really means.
-
-First we need to realize that RetractorDB works currently only on __regular__ time series. In case of general Time Series Databases - they support both regular and irregular time series.
+The simplest tasks &mdash; a histogram of changes, the average of an
+incoming measurement &mdash; are common ground for any time series
+database. It gets harder once someone asks how much data you're
+willing to touch: get near infinity, and "simple" stops meaning much.
 
 ### Downsampling
 
-The idea of downsampling with time series databases was well described in one of the [InfluxDB presentations][YT-FL-DOWNSAMPL]. According to [OpenTSDB Documentation][OPENTSDB-DOWNSAMPL], downsampling (or in signal processing, decimation) is the process of reducing the sampling rate, or resolution, of data.
+Downsampling &mdash; decimation, in signal-processing terms &mdash; is
+the process of reducing the sampling rate or resolution of data, as
+described in [OpenTSDB's documentation][OPENTSDB-DOWNSAMPL] and
+[one of InfluxDB's own talks on the subject][YT-FL-DOWNSAMPL]. In
+RetractorDB this isn't a special operator bolted onto the query
+language &mdash; it's the same interleave/de-interleave algebra used
+everywhere else, applied with a different rational ratio.
+
+## Where the hobby-DB field stands
+
+The [Database of Databases][DBDB] tracks new hobby-classified systems
+every year, most of them key-value stores, embedded engines, or
+AI-assisted rebuilds of familiar models. Very few take on regular,
+multi-rate time series as a first-class algebraic object the way
+RetractorDB does &mdash; that gap, more than any benchmark number, is
+the actual case for a different approach.
 
 [KT-2018]:http://helios.mi.parisdescartes.fr/~themisp/publications/icde18-sms.pdf
 [DB-RANK]:https://db-engines.com/en/ranking/time+series+dbms
+[DBDB]:https://dbdb.io/browse?project-type=hobby
 [YT-FL-DOWNSAMPL]:https://youtu.be/j3x0TohyGJY
 [OPENTSDB-DOWNSAMPL]:http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html
 [OPENTSDB-AGREGATORS]:http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html
