@@ -4,7 +4,6 @@ permalink: /
 title: "RetractorDB"
 seo_title: "RetractorDB — Exact streams. Deterministic by theorem."
 excerpt: "RetractorDB is an open-source Deterministic Edge Signal Processing Engine whose resampling operators are proved exact — grounded in rational Beatty sequences and Fraenkel's partition theorem."
-rich_icons: true
 fontawesome: true
 og_image: "/assets/images/icon/ms-icon-310x310.png"
 og_image_width: 310
@@ -161,7 +160,7 @@ og_image_height: 310
 
 <span class="cm"># 5. adaptive threshold — 0.5 s moving average</span>
 <span class="kw">SELECT</span> mlii[0]-900, mwi[0]*5, (mwi[0]-mwi_thr[0]*2)*5
-  <span class="kw">STREAM</span> qrs_out <span class="kw">FROM</span> mlii+mwi+mwi_thr</pre>
+<span class="kw">STREAM</span> qrs_out <span class="kw">FROM</span> mlii+mwi+mwi_thr</pre>
     </div>
   </section>
 
@@ -176,11 +175,12 @@ og_image_height: 310
         </div>
         <div class="tl">
           <div class="yr">1969</div>
-          <p>Fraenkel generalizes the partition criterion to <strong>rational</strong> parameters — the computable case.</p>
+          <p>Fraenkel generalizes the partition criterion to <strong>rational</strong> parameters — the <a href="https://planetmath.org/fraenkelspartitiontheorem">computable case</a>.</p>
         </div>
         <div class="tl">
           <div class="yr">2006</div>
-          <p>The covering-systems &harr; stream-alignment bridge is established in peer-reviewed form.</p>
+          <p>The covering-systems &harr; stream-alignment bridge is established in peer-reviewed form <a href=
+          "https://www.academia.edu/1840564/Deterministic_method_of_data_sequence_processing">Det. method...</a> .</p>
         </div>
         <div class="tl">
           <div class="yr">2026</div>

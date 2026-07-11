@@ -4,15 +4,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ full_title }}</title>
 <meta name="description" content="{{ page.excerpt | default: site.description }}">
-{% if page.rich_icons %}
-<link rel="icon" type="image/png" sizes="70x70" href="/assets/images/icon/ms-icon-70x70.png">
-<link rel="icon" type="image/png" sizes="144x144" href="/assets/images/icon/ms-icon-144x144.png">
-<link rel="icon" type="image/png" sizes="150x150" href="/assets/images/icon/ms-icon-150x150.png">
-<link rel="icon" type="image/png" sizes="310x310" href="/assets/images/icon/ms-icon-310x310.png">
-<meta name="msapplication-TileImage" content="/assets/images/icon/ms-icon-310x310.png">
-{% else %}
-<link rel="icon" href="/favicon.ico">
-{% endif %}
+<link rel="icon" type="image/svg+xml" href="/assets/images/icon/scissors.svg">
+<link rel="alternate icon" href="/favicon.ico">
+<script>
+(function(){
+  try{
+    if(localStorage.getItem('theme') === 'light'){
+      document.documentElement.setAttribute('data-theme','light');
+    }
+  }catch(e){}
+  window.toggleTheme = function(){
+    var next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    if(next === 'light'){ document.documentElement.setAttribute('data-theme','light'); }
+    else{ document.documentElement.removeAttribute('data-theme'); }
+    try{ localStorage.setItem('theme', next); }catch(e){}
+  };
+})();
+</script>
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ full_title }}">
 <meta property="og:description" content="{{ page.excerpt | default: site.description }}">
