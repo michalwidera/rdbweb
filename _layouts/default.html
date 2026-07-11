@@ -22,7 +22,10 @@
 
 <nav>
   <div class="nav-in">
-    <img class="mark" src="{{ '/assets/images/icon/ms-icon-144x144.png' | relative_url }}" alt="" width="34" height="34" aria-hidden="true" />
+    <picture class="mark-wrap" aria-hidden="true">
+      <source media="(prefers-color-scheme: dark)" srcset="{{ '/assets/images/icon/ms-icon-144x144-dark.svg' | relative_url }}" />
+      <img class="mark" src="{{ '/assets/images/icon/ms-icon-144x144.png' | relative_url }}" alt="" width="34" height="34" />
+    </picture>
     <span class="wordmark">Retractor<b>DB</b></span>
     <div class="nav-links">
       <a href="/interleave/">Interleave</a>

@@ -50,10 +50,8 @@ code,pre{font-family:"IBM Plex Mono",ui-monospace,monospace}
 /* ---------- nav ---------- */
 nav{border-bottom:1px solid var(--rule);background:var(--paper)}
 .nav-in{display:flex;align-items:center;gap:13px;padding:18px 24px;max-width:var(--maxw);margin:0 auto}
-.mark{width:34px;height:34px;flex:none}
-.mark .mk-ink{fill:var(--ink)}
-.mark .mk-blue{fill:var(--brand)}
-.mark .mk-stroke{stroke:var(--ink)}
+.mark-wrap{width:34px;height:34px;flex:none;display:block}
+.mark{width:100%;height:100%;display:block}
 .wordmark{font-family:"Ubuntu",sans-serif;font-style:italic;font-weight:500;font-size:21px;color:var(--ink)}
 .wordmark b{color:var(--brand);font-weight:500}
 .nav-links{margin-left:auto;display:flex;gap:26px;font-size:15px;font-weight:500}
