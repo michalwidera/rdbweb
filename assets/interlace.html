@@ -151,7 +151,9 @@
 
                 const rationalNum3 = parseFloat( ( rationalNum1 * rationalNum2 ) / (rationalNum1 + rationalNum2) );
 
-                const delta = rationalNum3;
+                // selection weight (share of B in the merge), distinct from the
+                // combined output rate rationalNum3 — see the implementation docs
+                const delta = rationalNum2 / (rationalNum1 + rationalNum2);
                 const A = firstSequence;
                 const B = secondSequence;
                 

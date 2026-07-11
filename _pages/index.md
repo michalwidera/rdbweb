@@ -66,6 +66,11 @@ og_image_height: 310
         The formal proof &mdash; grounded in number theory &mdash; is in
         <a href="https://arxiv.org/abs/2607.07730">the paper</a>, for the curious.
       </p>
+      <p class="hero-note">
+        Want to see the rules for yourself? Try the
+        <a href="/interlace/">interlace</a> and <a href="/sum/">sum</a>
+        operators on your own sequences and rates.
+      </p>
     </div>
   </section>
 
