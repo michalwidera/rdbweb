@@ -1,0 +1,34 @@
+{% assign feature_id = include.id | default: "feature_row" %}
+{% assign features = page[feature_id] %}
+
+{% if features %}
+<div class="feature-row feature-row--{{ include.type | default: 'center' }}">
+  {% for feature in features %}
+    <section class="feature-item">
+      {% if feature.image_path %}
+        <p>
+          <img src="{{ feature.image_path | relative_url }}" alt="{{ feature.alt | default: feature.title | escape }}">
+        </p>
+      {% endif %}
+
+      {% if feature.image_caption %}
+        <p>{{ feature.image_caption }}</p>
+      {% endif %}
+
+      {% if feature.title %}
+        <h3>{{ feature.title }}</h3>
+      {% endif %}
+
+      {% if feature.excerpt %}
+        {{ feature.excerpt | markdownify }}
+      {% endif %}
+
+      {% if feature.url and feature.btn_label %}
+        <p>
+          <a href="{{ feature.url | relative_url }}">{{ feature.btn_label }}</a>
+        </p>
+      {% endif %}
+    </section>
+  {% endfor %}
+</div>
+{% endif %}

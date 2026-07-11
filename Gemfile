@@ -1,8 +1,6 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.3"
-gem "jekyll-sitemap"
-gem "jekyll-feed"
-gem "webrick"
+gem "github-pages", group: :jekyll_plugins
+gem "webrick", "~> 1.8"
 gem "tzinfo-data"
 gem "wdm", "~> 0.1.0" if Gem.win_platform?

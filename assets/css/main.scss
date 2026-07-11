@@ -24,7 +24,4 @@ p {
 
 @import url('https://fonts.googleapis.com/css?family=Ubuntu|Vollkorn&display=swap');
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
-
 
