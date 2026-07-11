@@ -1,42 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ page.title }} — RetractorDB</title>
-<meta name="description" content="{{ page.excerpt | default: site.description }}">
-<link rel="icon" href="/favicon.ico">
-<meta property="og:type" content="website">
-<meta property="og:title" content="{{ page.title }} — RetractorDB">
-<meta property="og:description" content="{{ page.excerpt | default: site.description }}">
-<meta property="og:image" content="{{ site.url }}/assets/og-card.png">
-<meta property="og:url" content="{{ site.url }}{{ page.url }}">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@widera_michal">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;1,300;1,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/site.css">
+{% include head.html %}
 </head>
 <body>
 
-<nav>
-  <div class="nav-in">
-    <picture class="mark-wrap" aria-hidden="true">
-      <source media="(prefers-color-scheme: dark)" srcset="{{ '/assets/images/icon/ms-icon-144x144-dark.svg' | relative_url }}" />
-      <img class="mark" src="{{ '/assets/images/icon/ms-icon-144x144.png' | relative_url }}" alt="" width="34" height="34" />
-    </picture>
-    <span class="wordmark">Retractor<b>DB</b></span>
-    <div class="nav-links">
-      <a href="/interleave/">Interleave</a>
-      <a href="/sum/">Sum</a>
-      <a href="https://arxiv.org/abs/2607.07730">Paper</a>
-      <a href="https://dokumentacja.retractordb.com">Docs</a>
-      <a href="https://github.com/michalwidera/retractordb">GitHub</a>
-      <a href="/trademark/">Trademark</a>
-    </div>
-  </div>
-</nav>
+{% include nav.html %}
 
 <div class="pageheader">
   <div class="pageheader-in">
@@ -52,15 +21,7 @@
   </div>
 </main>
 
-<footer>
-  <div class="wrap">
-    <div class="cols">
-      <span>&copy; 2006&ndash;2026 Michal Widera &middot; MIT license &middot; RetractorDB&reg; (R.332224)</span>
-      <a class="mono" href="https://orcid.org/0000-0002-3578-3792">ORCID 0000-0002-3578-3792</a>
-      <a class="mono" href="https://github.com/michalwidera/retractordb">github.com/michalwidera/retractordb</a>
-      <a class="mono" href="https://arxiv.org/abs/2607.07730">arXiv:2607.07730</a>
-    </div>
-  </div>
-</footer>
-  </body>
+{% include footer.html %}
+
+</body>
 </html>

@@ -1,0 +1,32 @@
+<!-- rxmarbles-style rails: every marble on A and B flows continuously left to right at
+     constant, evenly-spaced pace; on reaching the interleave operator each one crossfades
+     into the merged C stream and keeps flowing. A:B density is 3:2, the true Δa:Δb rate ratio -->
+<svg class="merge" viewBox="0 0 1200 260" aria-label="Streams A and B flow continuously into the interleave operator and emerge merged as stream C">
+  <defs>
+    <path id="rowA-path" class="gpath" d="M -60,64 L 560,64 Q 610,64 630,97 Q 650,130 700,130 L 1300,130"/>
+    <path id="rowB-path" class="gpath" d="M -60,196 L 560,196 Q 610,196 630,163 Q 650,130 700,130 L 1300,130"/>
+  </defs>
+
+  <text class="lbl" x="60" y="36">&Delta;a = 2</text>
+  <text class="lbl" x="60" y="238">&Delta;b = 3</text>
+  <text class="op" x="576" y="141">#</text>
+  <text class="lbl lbl-mix" x="760" y="100">&Delta;c = 6/5</text>
+
+  {% for i in (0..11) %}
+  {% assign begin = i | times: 1.0 %}
+  <g class="marble">
+    <animateMotion dur="12s" begin="{{ begin }}s" repeatCount="indefinite" calcMode="paced"><mpath href="#rowA-path"/></animateMotion>
+    <circle r="11" class="mk-ink" opacity="0"><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.50;0.62;1" dur="12s" begin="{{ begin }}s" repeatCount="indefinite"/></circle>
+    <circle r="11" class="mk-mix" opacity="0"><animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.50;0.62;1" dur="12s" begin="{{ begin }}s" repeatCount="indefinite"/></circle>
+  </g>
+  {% endfor %}
+
+  {% for i in (0..7) %}
+  {% assign begin = i | times: 1.5 | plus: 0.75 %}
+  <g class="marble">
+    <animateMotion dur="12s" begin="{{ begin }}s" repeatCount="indefinite" calcMode="paced"><mpath href="#rowB-path"/></animateMotion>
+    <circle r="11" class="mk-blue" opacity="0"><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.50;0.62;1" dur="12s" begin="{{ begin }}s" repeatCount="indefinite"/></circle>
+    <circle r="11" class="mk-mix" opacity="0"><animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.50;0.62;1" dur="12s" begin="{{ begin }}s" repeatCount="indefinite"/></circle>
+  </g>
+  {% endfor %}
+</svg>

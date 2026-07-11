@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Trademark guidelines"
 permalink: /trademark/
+title: "Trademark guidelines"
 eyebrow: "Brand"
 excerpt: "How to write the RetractorDB word mark, and the meaning behind the scissors device mark."
 toc: true

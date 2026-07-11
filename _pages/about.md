@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "About"
 permalink: /about/
+title: "About"
 eyebrow: "About the project"
 excerpt: "RetractorDB is a solo research project: open for people, built to earn nothing but understanding."
 ---

@@ -1,8 +1,8 @@
-# RetractorDB — Jekyll config for the custom brand site (see BRAND.md).
+# RetractorDB — Jekyll config for the custom brand site.
 # This site no longer uses a remote theme (Minimal Mistakes) — chrome
-# lives in _layouts/default.html + assets/css/site.css, and the
-# homepage (index.html) is a self-contained static file per BRAND.md
-# section 6 ("deploy as-is").
+# lives in _layouts/default.html (inner pages) and _layouts/home.html
+# (homepage, rendered from index.md), sharing nav/footer/head partials
+# from _includes and tokens/rules from assets/css/site.css.
 
 title: RetractorDB
 email: michal@widera.com.pl
@@ -23,9 +23,9 @@ timezone: Europe/Warsaw
 include:
   - _pages
 
-# index.html and 404.md are served from repo root / _pages respectively;
-# _pages is included above so Jekyll processes front-matter pages that
-# live outside the default posts/collections folders.
+# _pages holds every front-matter page, including index.md (permalink: /)
+# and 404.md; it's included above so Jekyll processes pages that live
+# outside the default posts/collections folders.
 
 plugins:
   - jekyll-sitemap

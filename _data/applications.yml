@@ -1,0 +1,45 @@
+- icon: fa-plane
+  title: Aerospace
+  text: >-
+    Flight-test and avionics telemetry: hundreds of sensors at mismatched rates
+    merged deterministically, with byte-identical replay for post-flight and
+    incident analysis.
+- icon: fa-car
+  title: Automotive
+  text: >-
+    ECU and vehicle-bus signals aligned without floating-point drift;
+    reproducible traces for validation, fleet analytics, and homologation.
+- icon: fa-industry
+  title: Industrial monitoring
+  text: >-
+    Machine condition monitoring and predictive maintenance: vibration,
+    current, and temperature reduced at the edge to exact, comparable
+    features.
+- icon: fa-bolt
+  title: Energy &amp; grid
+  text: >-
+    Synchrophasors, substations, wind turbines: every rate is a rational
+    multiple of line frequency, and post-fault analysis demands exact,
+    replayable records.
+- icon: fa-tower-broadcast
+  title: Audio &amp; broadcast
+  text: >-
+    44.1 &harr; 48 kHz is exactly 147:160 — a rational conversion the algebra
+    performs with zero accumulated drift, keeping long chains sample-accurate.
+- icon: fa-satellite-dish
+  title: Software-defined radio
+  text: >-
+    Decimation and interpolation chains with rational factors are
+    SDR&rsquo;s daily bread; here they are exact, declarative, and inspectable
+    query operators.
+- icon: fa-robot
+  title: Robotics &amp; test benches
+  text: >-
+    Encoder, IMU, and force signals fused across control-loop rates;
+    hardware-in-the-loop runs replay bit-for-bit for regression testing and
+    certification.
+- icon: fa-heart-pulse
+  title: Biomedical
+  text: >-
+    Vital-sign pipelines — the engine&rsquo;s original domain and the
+    paper&rsquo;s worked example, a special case of the same algebra.
