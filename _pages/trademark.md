@@ -35,6 +35,22 @@ dark plane. &ldquo;DB&rdquo; is always baby blue, `#6699FF`.
 <i><font face="Ubuntu">Retractor</font><font face="Ubuntu" color="#6699FF">DB</font></i>
 ```
 
+The word mark is also available as pre-drawn SVG artwork, in the same
+two background variants as the device mark below:
+
+<div class="panel-card" style="display:flex;gap:32px;align-items:center;flex-wrap:wrap">
+  <img src="{{ '/assets/images/retractordb.svg' | relative_url }}" alt="RetractorDB word mark, light background" width="220" height="35">
+  <div style="background:#101114;padding:16px;border-radius:8px">
+    <img src="{{ '/assets/images/retractordb-onblack.svg' | relative_url }}" alt="RetractorDB word mark, dark background" width="220" height="35">
+  </div>
+</div>
+
+<p class="body">
+  <a href="{{ '/assets/images/retractordb.svg' | relative_url }}" download>Download the light-background version (.svg)</a>
+  &nbsp;&middot;&nbsp;
+  <a href="{{ '/assets/images/retractordb-onblack.svg' | relative_url }}" download>Download the dark-background version (.svg)</a>
+</p>
+
 ## Device mark: the scissors
 
 The primary graphic mark is the **scissors / &ldquo;cut-here&rdquo;**
@@ -44,12 +60,22 @@ constituent streams, **A** (black) and **B** (blue, `#6699FF`). It's a
 deliberate pun on the project's name &mdash; a retractor, and a mark
 that cuts a stream apart.
 
+The mark is distributed as SVG in two ink variants &mdash; black for
+light backgrounds, white for dark backgrounds &mdash; so it stays crisp
+at any size. The pivot ring is always baby blue, `#6699FF`, in both.
+
 <div class="panel-card" style="display:flex;gap:32px;align-items:center;flex-wrap:wrap">
-  <img src="{{ '/assets/images/retractordb.svg' | relative_url }}" alt="RetractorDB scissors mark, light background" width="120" height="120">
+  <img src="{{ '/assets/images/icon/scissors.svg' | relative_url }}" alt="RetractorDB scissors mark, black ink for light backgrounds" width="120" height="120">
   <div style="background:#101114;padding:16px;border-radius:8px">
-    <img src="{{ '/assets/images/retractordb-onblack.svg' | relative_url }}" alt="RetractorDB scissors mark, dark background" width="120" height="120">
+    <img src="{{ '/assets/images/icon/scissors-dark.svg' | relative_url }}" alt="RetractorDB scissors mark, white ink for dark backgrounds" width="120" height="120">
   </div>
 </div>
+
+<p class="body">
+  <a href="{{ '/assets/images/icon/scissors.svg' | relative_url }}" download>Download the black version (.svg)</a>
+  &nbsp;&middot;&nbsp;
+  <a href="{{ '/assets/images/icon/scissors-dark.svg' | relative_url }}" download>Download the white version (.svg)</a>
+</p>
 
 The merged-stream dot order, wherever it's drawn, must be the true 2:3
 interleave &mdash; **A A B A B A A B A B** &mdash; matching the
@@ -68,5 +94,6 @@ navigation, favicons, or social cards.
 - Don't recolor the device mark outside black / white / `#6699FF`.
 - Don't distort, rotate, or add effects (shadows, gradients, outlines).
 - Keep clear space around the mark of at least one mark-width on every side.
-- `*-onblack.svg` variants exist for dark surfaces; don't place the
-  light variant on a dark background or vice versa.
+- `*-onblack.svg` (word mark) and `*-dark.svg` (device mark) variants
+  exist for dark surfaces; don't place the light variant on a dark
+  background or vice versa.
