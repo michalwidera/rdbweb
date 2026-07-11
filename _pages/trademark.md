@@ -45,9 +45,9 @@ deliberate pun on the project's name &mdash; a retractor, and a mark
 that cuts a stream apart.
 
 <div class="panel-card" style="display:flex;gap:32px;align-items:center;flex-wrap:wrap">
-  <img src="/assets/retractordb-mark-cut.svg" alt="RetractorDB scissors mark, light background" width="120" height="120">
+  <img src="{{ '/assets/images/retractordb.svg' | relative_url }}" alt="RetractorDB scissors mark, light background" width="120" height="120">
   <div style="background:#101114;padding:16px;border-radius:8px">
-    <img src="/assets/retractordb-mark-cut-onblack.svg" alt="RetractorDB scissors mark, dark background" width="120" height="120">
+    <img src="{{ '/assets/images/retractordb-onblack.svg' | relative_url }}" alt="RetractorDB scissors mark, dark background" width="120" height="120">
   </div>
 </div>
 
