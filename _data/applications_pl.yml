@@ -1,0 +1,46 @@
+- icon: fa-plane
+  title: Lotnictwo
+  text: >-
+    Telemetria z lotów testowych i awioniki: setki czujników o niezgodnych
+    częstotliwościach scalane deterministycznie, z odtwarzaniem identycznym co
+    do bitu na potrzeby analiz powypadkowych i po locie.
+- icon: fa-car
+  title: Motoryzacja
+  text: >-
+    Sygnały ECU i magistrali pojazdowej wyrównywane bez dryfu
+    zmiennoprzecinkowego; powtarzalne przebiegi do walidacji, analityki floty
+    i homologacji.
+- icon: fa-industry
+  title: Monitoring przemysłowy
+  text: >-
+    Monitorowanie stanu maszyn i utrzymanie predykcyjne: drgania, prąd i
+    temperatura redukowane na brzegu sieci do dokładnych, porównywalnych cech.
+- icon: fa-bolt
+  title: Energetyka i sieci
+  text: >-
+    Synchrofazory, stacje elektroenergetyczne, turbiny wiatrowe: każda
+    częstotliwość jest wymierną wielokrotnością częstotliwości sieci, a
+    analiza powawaryjna wymaga dokładnych, odtwarzalnych zapisów.
+- icon: fa-tower-broadcast
+  title: Audio i nadawanie
+  text: >-
+    44,1 &harr; 48 kHz to dokładnie 147:160 &mdash; wymierna konwersja, którą
+    algebra wykonuje bez skumulowanego dryfu, zachowując dokładność sample'i
+    w długich łańcuchach.
+- icon: fa-satellite-dish
+  title: Radio definiowane programowo
+  text: >-
+    Łańcuchy decymacji i interpolacji z wymiernymi współczynnikami to
+    codzienność SDR; tutaj są dokładnymi, deklaratywnymi i inspekcjonowalnymi
+    operatorami zapytań.
+- icon: fa-robot
+  title: Robotyka i stanowiska testowe
+  text: >-
+    Sygnały enkoderów, IMU i siły łączone między różnymi częstotliwościami
+    pętli sterowania; testy hardware-in-the-loop odtwarzane bit po bicie na
+    potrzeby testów regresyjnych i certyfikacji.
+- icon: fa-heart-pulse
+  title: Biomedycyna
+  text: >-
+    Potoki przetwarzania sygnałów życiowych &mdash; pierwotna domena silnika i
+    przykład użyty w artykule &mdash; szczególny przypadek tej samej algebry.

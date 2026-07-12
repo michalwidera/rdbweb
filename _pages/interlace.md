@@ -1,6 +1,8 @@
 ---
 layout: default
 permalink: /interlace/
+lang: en
+lang_alt: /pl/interlace/
 title: "Interlace operator"
 eyebrow: "Try it yourself"
 excerpt: "Combine two sequences at two different rates and watch the interlace operator merge them into one, tick by tick."

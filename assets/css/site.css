@@ -72,6 +72,14 @@ nav{border-bottom:1px solid var(--rule);background:var(--paper)}
 :root[data-theme="light"] .theme-toggle .icon-sun{display:block}
 :root[data-theme="light"] .theme-toggle .icon-moon{display:none}
 
+.lang-toggle{
+  display:inline-flex;align-items:center;justify-content:center;
+  height:32px;min-width:32px;padding:0 8px;border-radius:6px;border:1px solid var(--rule);
+  background:transparent;color:var(--ink-soft);cursor:pointer;flex:none;
+  font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:600;letter-spacing:0.02em;
+}
+.lang-toggle:hover{color:var(--ink);border-color:var(--ink-soft);text-decoration:none}
+
 /* ---------- header band (graph paper) ---------- */
 .pageheader{
   border-bottom:1px solid var(--rule);

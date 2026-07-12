@@ -1,6 +1,8 @@
 ---
 layout: default
 permalink: /about/
+lang: en
+lang_alt: /pl/about/
 title: "About"
 eyebrow: "About the project"
 excerpt: "RetractorDB is a solo research project: open for people, built to earn nothing but understanding."

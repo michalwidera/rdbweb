@@ -1,6 +1,8 @@
 ---
 layout: default
 permalink: /trademark/
+lang: en
+lang_alt: /pl/trademark/
 title: "Trademark guidelines"
 eyebrow: "Brand"
 excerpt: "How to write the RetractorDB word mark, and the meaning behind the scissors device mark."

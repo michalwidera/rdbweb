@@ -1,6 +1,8 @@
+{% assign lang = page.lang | default: "en" %}
+{% assign t = site.data.i18n[lang] %}
 <nav>
   <div class="nav-in">
-    <a class="brand" href="/" aria-label="RetractorDB home">
+    <a class="brand" href="{{ t.home_url }}" aria-label="RetractorDB home">
       <span class="mark-wrap" aria-hidden="true">
         <img class="mark mark-dark" src="/assets/images/icon/scissors-dark.svg" alt="" width="34" height="34">
         <img class="mark mark-light" src="/assets/images/icon/scissors.svg" alt="" width="34" height="34">
@@ -8,14 +10,15 @@
       <span class="wordmark">Retractor<b>DB</b></span>
     </a>
     <div class="nav-links">
-      <a href="https://arxiv.org/abs/2607.07730">Paper</a>
-      <a href="https://dokumentacja.retractordb.com">Docs</a>
-      <a href="https://github.com/michalwidera/retractordb">GitHub</a>
-      <a href="/trademark/">Trademark</a>
+      <a href="https://arxiv.org/abs/2607.07730">{{ t.nav_paper }}</a>
+      <a href="{{ t.docs_url }}">{{ t.nav_docs }}</a>
+      <a href="https://github.com/michalwidera/retractordb">{{ t.nav_github }}</a>
+      <a href="{{ t.trademark_url }}">{{ t.nav_trademark }}</a>
     </div>
-    <button class="theme-toggle" type="button" aria-label="Toggle light/dark theme" onclick="toggleTheme()">
+    <button class="theme-toggle" type="button" aria-label="{{ t.theme_toggle_label }}" onclick="toggleTheme()">
       <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
       <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.354 15.354A9 9 0 1 1 8.646 3.646 7 7 0 0 0 20.354 15.354Z"/></svg>
     </button>
+    <a class="lang-toggle" href="{{ page.lang_alt | default: '/' }}" aria-label="{{ t.lang_toggle_label }}" onclick="try{localStorage.setItem('lang','{{ t.lang_toggle_short | downcase }}')}catch(e){}">{{ t.lang_toggle_short }}</a>
   </div>
 </nav>

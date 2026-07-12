@@ -1,6 +1,8 @@
 ---
 layout: home
 permalink: /
+lang: en
+lang_alt: /pl/
 title: "RetractorDB"
 seo_title: "RetractorDB — Exact streams. Deterministic by theorem."
 excerpt: "RetractorDB is an open-source Deterministic Edge Signal Processing Engine whose resampling operators are proved exact — grounded in rational Beatty sequences and Fraenkel's partition theorem."
@@ -86,15 +88,17 @@ og_image_height: 310
         merged, resampled, and audited, the algebra applies unchanged —
         only the coefficients differ.
       </p>
+      {% assign apps = site.data.applications %}
+      {% if page.lang == "pl" %}{% assign apps = site.data.applications_pl %}{% endif %}
       <div class="carousel">
         <div class="carousel-track">
-          {% for app in site.data.applications %}
+          {% for app in apps %}
           <div class="card">
             <h3><i class="fa-solid {{ app.icon }}"></i>{{ app.title }}</h3>
             <p>{{ app.text }}</p>
           </div>
           {% endfor %}
-          {% for app in site.data.applications %}
+          {% for app in apps %}
           <div class="card" aria-hidden="true">
             <h3><i class="fa-solid {{ app.icon }}"></i>{{ app.title }}</h3>
             <p>{{ app.text }}</p>

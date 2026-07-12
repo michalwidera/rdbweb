@@ -1,7 +1,7 @@
 <!-- rxmarbles-style rails: every marble on A and B flows continuously left to right at
      constant, evenly-spaced pace; on reaching the interleave operator each one crossfades
      into the merged C stream and keeps flowing. A:B density is 3:2, the true Δa:Δb rate ratio -->
-<svg class="merge" viewBox="0 0 1200 260" aria-label="Streams A and B flow continuously into the interleave operator and emerge merged as stream C">
+<svg class="merge" viewBox="0 0 1200 260" aria-label="{% if include.lang == 'pl' %}Strumienie A i B płyną nieprzerwanie do operatora interleave i wyłaniają się z niego połączone jako strumień C{% else %}Streams A and B flow continuously into the interleave operator and emerge merged as stream C{% endif %}">
   <defs>
     <path id="rowA-path" class="gpath" d="M -60,64 L 560,64 Q 610,64 630,97 Q 650,130 700,130 L 1300,130"/>
     <path id="rowB-path" class="gpath" d="M -60,196 L 560,196 Q 610,196 630,163 Q 650,130 700,130 L 1300,130"/>

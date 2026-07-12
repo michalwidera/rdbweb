@@ -1,7 +1,9 @@
+{% assign lang = page.lang | default: "en" %}
+{% assign t = site.data.i18n[lang] %}
 <footer>
   <div class="wrap">
     <div class="cols">
-      <span>&copy; Michal Widera &middot; foundations published 2003&ndash;2006 &middot; engine developed since 2006, open-sourced 2018 &middot; MIT license &middot; RetractorDB&reg; (R.332224)</span>
+      <span>{{ t.footer_line }}</span>
       <a class="mono" href="https://orcid.org/0000-0002-3578-3792">ORCID 0000-0002-3578-3792</a>
       <a class="mono" href="https://github.com/michalwidera/retractordb">github.com/michalwidera/retractordb</a>
       <a class="mono" href="https://arxiv.org/abs/2607.07730">arXiv:2607.07730</a>

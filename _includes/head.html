@@ -6,6 +6,13 @@
 <meta name="description" content="{{ page.excerpt | default: site.description }}">
 <link rel="icon" type="image/svg+xml" href="/assets/images/icon/scissors.svg">
 <link rel="alternate icon" href="/favicon.ico">
+{% if page.lang_alt %}
+{% assign this_lang = page.lang | default: "en" %}
+{% assign other_lang = "en" %}
+{% if this_lang == "en" %}{% assign other_lang = "pl" %}{% endif %}
+<link rel="alternate" hreflang="{{ this_lang }}" href="{{ site.url }}{{ page.url }}">
+<link rel="alternate" hreflang="{{ other_lang }}" href="{{ site.url }}{{ page.lang_alt }}">
+{% endif %}
 <script>
 (function(){
   try{
@@ -19,6 +26,24 @@
     else{ document.documentElement.removeAttribute('data-theme'); }
     try{ localStorage.setItem('theme', next); }catch(e){}
   };
+})();
+(function(){
+  // First-time visitors are routed to the language matching their browser
+  // locale (PL browsers -> /pl/ pages, everyone else -> English); once a
+  // preference is stored (auto-detected or picked via the EN/PL toggle in
+  // the nav), it always wins and this never redirects again.
+  try{
+    if(!localStorage.getItem('lang')){
+      var pageLang = document.documentElement.getAttribute('lang') || 'en';
+      var browserLang = ((navigator.language || navigator.userLanguage || 'en') + '').toLowerCase();
+      var resolvedLang = browserLang.indexOf('pl') === 0 ? 'pl' : 'en';
+      localStorage.setItem('lang', resolvedLang);
+      if(resolvedLang !== pageLang){
+        var alt = document.documentElement.getAttribute('data-alt-url');
+        if(alt){ window.location.replace(alt); }
+      }
+    }
+  }catch(e){}
 })();
 </script>
 <meta property="og:type" content="website">

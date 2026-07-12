@@ -1,6 +1,8 @@
 ---
 layout: default
 permalink: /privacy/
+lang: en
+lang_alt: /pl/privacy/
 title: "Privacy Policy"
 eyebrow: "Legal"
 excerpt: "retractordb.com collects the minimum GitHub Pages itself requires, and nothing else."

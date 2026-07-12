@@ -1,0 +1,32 @@
+# Shared UI strings for the EN/PL chrome (nav, footer, toggles).
+# Page body copy is translated per-page, not here.
+en:
+  nav_paper: "Paper"
+  nav_docs: "Docs"
+  nav_github: "GitHub"
+  nav_trademark: "Trademark"
+  docs_url: "https://documentation.retractordb.com/"
+  trademark_url: "/trademark/"
+  home_url: "/"
+  theme_toggle_label: "Toggle light/dark theme"
+  lang_toggle_label: "Switch to Polish"
+  lang_toggle_short: "PL"
+  footer_line: >-
+    &copy; Michal Widera &middot; foundations published 2003&ndash;2006 &middot;
+    engine developed since 2006, open-sourced 2018 &middot; MIT license &middot;
+    RetractorDB&reg; (R.332224)
+pl:
+  nav_paper: "Artykuł"
+  nav_docs: "Dokumentacja"
+  nav_github: "GitHub"
+  nav_trademark: "Znak towarowy"
+  docs_url: "https://dokumentacja.retractordb.com/"
+  trademark_url: "/pl/trademark/"
+  home_url: "/pl/"
+  theme_toggle_label: "Przełącz tryb jasny/ciemny"
+  lang_toggle_label: "Switch to English"
+  lang_toggle_short: "EN"
+  footer_line: >-
+    &copy; Michal Widera &middot; fundamenty opublikowane 2003&ndash;2006 &middot;
+    silnik rozwijany od 2006, open source od 2018 &middot; licencja MIT &middot;
+    RetractorDB&reg; (R.332224)
