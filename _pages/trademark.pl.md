@@ -5,7 +5,7 @@ lang: pl
 lang_alt: /trademark/
 title: "Zasady użycia znaku towarowego"
 eyebrow: "Marka"
-excerpt: "Jak zapisywać nazwę słowną RetractorDB oraz co oznacza znak graficzny nożyc."
+excerpt: "Jak zapisywać nazwę słowną RetractorDB oraz co oznacza znak graficzny."
 toc: true
 ---
 
@@ -25,7 +25,7 @@ udzielonym przez Urząd Patentowy Rzeczypospolitej Polskiej.
 
 RetractorDB zapisuje się jako jedno słowo, bez spacji. **Retractor**
 zaczyna się wielką literą; **DB** jest zawsze zapisane wielkimi
-literami. Krój pisma to **Ubuntu Italic**. &bdquo;Retractor&rdquo; jest
+literami. Krój pisma (jeśli jest używany) to **Ubuntu Italic**. &bdquo;Retractor&rdquo; jest
 czarny na jasnym tle, biały na ciemnym tle. &bdquo;DB&rdquo; jest zawsze
 w kolorze błękitnym, `#6699FF`.
 
@@ -57,11 +57,7 @@ dwóch wariantach tła co znak graficzny poniżej:
 ## Znak graficzny: nożyce
 
 Głównym znakiem graficznym jest **nożyce / &bdquo;przetnij tutaj&rdquo;**
-&mdash; dosłowny rysunek **operatora rozplatania (de-interleave)**:
-kropkowany, przeplatany strumień zostaje przecięty i rozdziela się na
-dwa strumienie składowe, **A** (czarny) i **B** (niebieski, `#6699FF`).
-To celowa gra słów z nazwą projektu &mdash; retractor to po angielsku
-m.in. rozwieracz/ściągacz, a znak dosłownie przecina strumień na dwoje.
+&mdash; dosłowny rysunek **operatora rozplatania (de-interleave)**. Retractor to po angielsku m.in. rozwieracz/ściągacz, a znak dosłownie przecina strumień na dwoje.
 
 Znak jest rozpowszechniany jako SVG w dwóch wariantach kolorystycznych
 &mdash; czarny na jasne tła, biały na ciemne tła &mdash; dzięki czemu
@@ -80,18 +76,6 @@ pozostaje ostry w każdym rozmiarze. Pierścień osi jest zawsze błękitny,
   &nbsp;&middot;&nbsp;
   <a href="{{ '/assets/images/icon/scissors-dark.svg' | relative_url }}" download>Pobierz wersję białą (.svg)</a>
 </p>
-
-Kolejność kropek w scalonym strumieniu, gdziekolwiek jest rysowana, musi
-odpowiadać prawdziwemu przeplotowi 2:3 &mdash; **A A B A B A A B A B**
-&mdash; zgodnie z przykładem z dokumentacji (&Tau; = {1, 2, a, 3, b, 4,
-5, c, 6, d}). Grubość linii to 16/512 z zaokrąglonymi zakończeniami,
-zgodnie z oryginalnym rysunkiem nożyc.
-
-Wcześniejszy znak z paskami &mdash; pięć pasków kodujących tę samą
-sekwencję wyboru przeplotu 2:3, **A B A A B** &mdash; pozostaje ważną
-grafiką historyczną (to wersja zgłoszona już do
-[dbdb.io](https://dbdb.io)), ale nie jest już głównym znakiem używanym w
-nawigacji, favikonach ani kartach społecznościowych.
 
 ## Zasady użycia
 

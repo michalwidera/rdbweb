@@ -24,7 +24,7 @@ from the Polish Patent Office.
 ## Word mark
 
 RetractorDB is written as one word, no space. **Retractor** starts with
-a capital letter; **DB** is always capitals. It is set in **Ubuntu
+a capital letter; **DB** is always capitals. If font is selected - It is set in **Ubuntu
 Italic**. &ldquo;Retractor&rdquo; is black on a light plane, white on a
 dark plane. &ldquo;DB&rdquo; is always baby blue, `#6699FF`.
 
@@ -56,11 +56,7 @@ two background variants as the device mark below:
 ## Device mark: the scissors
 
 The primary graphic mark is the **scissors / &ldquo;cut-here&rdquo;**
-lockup &mdash; a literal drawing of the **de-interleave operator**: a
-dotted, interleaved stream is cut and separates into its two
-constituent streams, **A** (black) and **B** (blue, `#6699FF`). It's a
-deliberate pun on the project's name &mdash; a retractor, and a mark
-that cuts a stream apart.
+lockup &mdash; a literal drawing of the **de-interleave operator**.
 
 The mark is distributed as SVG in two ink variants &mdash; black for
 light backgrounds, white for dark backgrounds &mdash; so it stays crisp
@@ -78,18 +74,6 @@ at any size. The pivot ring is always baby blue, `#6699FF`, in both.
   &nbsp;&middot;&nbsp;
   <a href="{{ '/assets/images/icon/scissors-dark.svg' | relative_url }}" download>Download the white version (.svg)</a>
 </p>
-
-The merged-stream dot order, wherever it's drawn, must be the true 2:3
-interleave &mdash; **A A B A B A A B A B** &mdash; matching the
-documentation's worked example (&Tau; = {1, 2, a, 3, b, 4, 5, c, 6, d}).
-Line weight is 16/512 with round caps, matching the original scissors
-drawing.
-
-An earlier bars mark &mdash; five bars encoding the same 2:3 interleave
-selection sequence, **A B A A B** &mdash; remains valid heritage
-artwork (it's the version already submitted to
-[dbdb.io](https://dbdb.io)) but is no longer the primary mark used in
-navigation, favicons, or social cards.
 
 ## Usage
 
