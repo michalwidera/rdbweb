@@ -174,22 +174,36 @@ og_image_height: 310
       <span class="sec-eyebrow">Lineage</span>
       <h2>A century of mathematics, one engine</h2>
       <div class="timeline">
-        <div class="tl first">
-          <div class="yr">1926</div>
-          <p>Beatty shows two sequences &lfloor;np&rfloor;, &lfloor;nq&rfloor; partition &#8469; for irrational rates.</p>
+        <div class="tl first" tabindex="0">
+          <div class="tl-inner">
+            <div class="yr">1926</div>
+            <p>Beatty shows two sequences &lfloor;np&rfloor;, &lfloor;nq&rfloor; partition &#8469; for irrational rates.</p>
+          </div>
         </div>
-        <div class="tl">
-          <div class="yr">1969</div>
-          <p>Fraenkel generalizes the partition criterion to <strong>rational</strong> parameters — the <a href="https://planetmath.org/fraenkelspartitiontheorem">computable case</a>.</p>
+        <div class="tl" tabindex="0">
+          <div class="tl-inner">
+            <div class="yr">1969</div>
+            <p>Fraenkel generalizes the partition criterion to <strong>rational</strong> parameters — the <a href="https://planetmath.org/fraenkelspartitiontheorem">computable case</a>.</p>
+          </div>
         </div>
-        <div class="tl">
-          <div class="yr">2006</div>
-          <p>The covering-systems &harr; stream-alignment bridge is established in peer-reviewed form <a href=
-          "https://www.academia.edu/1840564/Deterministic_method_of_data_sequence_processing">Det. method...</a> .</p>
+        <div class="tl" tabindex="0">
+          <div class="tl-inner">
+            <div class="yr">2003</div>
+            <p>The operator algebra and declarative query language are defined in a fetal-monitoring context [JMIT vol. 5&ndash;6].</p>
+          </div>
         </div>
-        <div class="tl">
-          <div class="yr">2026</div>
-          <p>Full formal semantics, proofs, and the engine report: <a href="https://arxiv.org/abs/2607.07730">arXiv:2607.07730</a>.</p>
+        <div class="tl" tabindex="0">
+          <div class="tl-inner">
+            <div class="yr">2006</div>
+            <p>The covering-systems &harr; stream-alignment bridge is established in peer-reviewed form <a href=
+            "https://www.academia.edu/1840564/Deterministic_method_of_data_sequence_processing">Det. method...</a> .</p>
+          </div>
+        </div>
+        <div class="tl" tabindex="0">
+          <div class="tl-inner">
+            <div class="yr">2026</div>
+            <p>Full formal semantics, proofs, and the engine report: <a href="https://arxiv.org/abs/2607.07730">arXiv:2607.07730</a>.</p>
+          </div>
         </div>
       </div>
     </div>

@@ -238,9 +238,40 @@ pre.code{
 pre.code .kw{color:#8FB4FF}
 pre.code .cm{color:#7E8AA3}
 
-.timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;margin-top:30px}
-.tl{border-top:3px solid var(--brand);padding-top:14px}
-.tl.first{border-top-color:var(--ink)}
+.timeline{display:flex;align-items:flex-start;gap:18px;margin-top:30px}
+.tl{
+  flex:1 1 0;min-width:0;position:relative;
+  transition:flex-grow .4s cubic-bezier(.2,.8,.2,1);
+}
+.tl-inner{border-top:3px solid var(--brand);padding-top:14px}
+.tl.first .tl-inner{border-top-color:var(--ink)}
 .tl .yr{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:20px}
-.tl p{font-size:14.5px;color:var(--ink-soft);margin-top:6px}
+.tl p{
+  font-size:14.5px;color:var(--ink-soft);margin-top:6px;line-height:1.55;
+  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;line-clamp:3;overflow:hidden;
+}
 .tl a{font-size:14.5px}
+.timeline:hover .tl,.timeline:focus-within .tl{flex-grow:0.55}
+.tl:hover,.tl:focus,.tl:focus-within{flex-grow:2.6 !important;z-index:5}
+/* the card's own footprint never changes height — only .tl-inner pops out
+   as an absolutely-positioned overlay, so nothing below (footer, next
+   section) ever reflows while hovering */
+.tl:hover .tl-inner,.tl:focus .tl-inner,.tl:focus-within .tl-inner{
+  position:absolute;top:0;left:0;right:0;
+  background:var(--panel);border:1px solid var(--rule);border-top:3px solid var(--brand);
+  border-radius:0 0 8px 8px;padding:14px 16px 18px;
+  box-shadow:0 16px 36px rgba(0,0,0,.4);
+}
+.tl.first:hover .tl-inner,.tl.first:focus .tl-inner,.tl.first:focus-within .tl-inner{border-top-color:var(--ink)}
+.tl:hover .tl-inner p,.tl:focus .tl-inner p,.tl:focus-within .tl-inner p{-webkit-line-clamp:unset;line-clamp:unset;overflow:visible}
+@media(max-width:760px){
+  .timeline{flex-wrap:wrap}
+  .tl{flex:1 1 210px}
+  .timeline:hover .tl,.timeline:focus-within .tl{flex-grow:1 !important}
+  .tl p{-webkit-line-clamp:unset;line-clamp:unset;overflow:visible}
+  .tl:hover .tl-inner,.tl:focus .tl-inner,.tl:focus-within .tl-inner{
+    position:static;background:none;border:none;border-top:3px solid var(--brand);
+    box-shadow:none;padding:14px 0 0;
+  }
+  .tl.first:hover .tl-inner,.tl.first:focus .tl-inner,.tl.first:focus-within .tl-inner{border-top-color:var(--ink)}
+}
