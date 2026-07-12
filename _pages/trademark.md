@@ -24,9 +24,7 @@ from the Polish Patent Office.
 ## Word mark
 
 RetractorDB is written as one word, no space. **Retractor** starts with
-a capital letter; **DB** is always capitals. If font is selected - It is set in **Ubuntu
-Italic**. &ldquo;Retractor&rdquo; is black on a light plane, white on a
-dark plane. &ldquo;DB&rdquo; is always baby blue, `#6699FF`.
+a capital letter; **DB** is always capitals. It's correct to use a single word in the text: RetractorDB without spaces or dashes. If you want to use the color form, you must follow certain rules. If font is selected - It is set in **Ubuntu Italic**. &ldquo;Retractor&rdquo; is black on a light plane, white on a dark plane. &ldquo;DB&rdquo; is always baby blue, `#6699FF`.
 
 <p class="panel-card" style="font-family:'Ubuntu',sans-serif;font-style:italic;font-size:32px">
   Retractor<span style="color:#6699FF">DB</span>

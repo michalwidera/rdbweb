@@ -25,9 +25,9 @@ udzielonym przez Urząd Patentowy Rzeczypospolitej Polskiej.
 
 RetractorDB zapisuje się jako jedno słowo, bez spacji. **Retractor**
 zaczyna się wielką literą; **DB** jest zawsze zapisane wielkimi
-literami. Krój pisma (jeśli jest używany) to **Ubuntu Italic**. &bdquo;Retractor&rdquo; jest
-czarny na jasnym tle, biały na ciemnym tle. &bdquo;DB&rdquo; jest zawsze
-w kolorze błękitnym, `#6699FF`.
+literami.
+
+Poprawne jest użycie w tekście jednego słowa - RetractorDB, bez spacji lub myślników. Jeśli chcemy użyć formy kolorowej, pewnych zasad musimy przestrzegać. Krój pisma (jeśli jest używany) to **Ubuntu Italic**. &bdquo;Retractor&rdquo; jest czarny na jasnym tle, biały na ciemnym tle. &bdquo;DB&rdquo; jest zawsze w kolorze błękitnym, `#6699FF`.
 
 <p class="panel-card" style="font-family:'Ubuntu',sans-serif;font-style:italic;font-size:32px">
   Retractor<span style="color:#6699FF">DB</span>
