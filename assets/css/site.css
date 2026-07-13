@@ -236,6 +236,7 @@ main.home h2{
 @media (prefers-reduced-motion:reduce){
   .carousel-track{animation:none}
   .carousel{overflow-x:auto}
+  .carousel-track .card[aria-hidden="true"]{display:none}
 }
 
 pre.code{
