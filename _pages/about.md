@@ -18,11 +18,12 @@ RetractorDB.com and RetractorDB are distributed under the MIT License.
 This is not a company or a funded team — it's one person's research
 project, published so the ideas in it can be used, checked, and built
 upon. Documentation is written primarily in Polish; code comments are in
-Polish too. English is used here, on the website, and in the arXiv paper.
+Polish too. English is used here, on the website, and in the arXiv papers.
 
 - **Author:** Michal Widera &middot; <a href="mailto:michal@widera.com.pl">michal@widera.com.pl</a>
 - **ORCID:** <a href="https://orcid.org/0000-0002-3578-3792">0000-0002-3578-3792</a>
-- **Paper:** <a href="https://arxiv.org/abs/2607.07730">arXiv:2607.07730</a>
+- **Engine paper:** <a href="https://arxiv.org/abs/2607.07730">arXiv:2607.07730</a>
+- **Foundations paper (2006):** <a href="https://arxiv.org/abs/2607.10444">arXiv:2607.10444</a>
 - **Code:** <a href="https://github.com/michalwidera/retractordb">github.com/michalwidera/retractordb</a>
 - **Docs (PL):** <a href="https://dokumentacja.retractordb.com">dokumentacja.retractordb.com</a>
 

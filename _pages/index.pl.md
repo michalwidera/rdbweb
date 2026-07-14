@@ -181,8 +181,7 @@ og_image_height: 310
         <div class="tl" tabindex="0">
           <div class="tl-inner">
             <div class="yr">2006</div>
-            <p>Most między systemami pokryć a wyrównywaniem strumieni zostaje ustanowiony w recenzowanej publikacji <a href=
-            "https://www.academia.edu/1840564/Deterministic_method_of_data_sequence_processing">Det. method...</a> .</p>
+            <p>Most między systemami pokryć a wyrównywaniem strumieni zostaje ustanowiony w recenzowanej publikacji [Annales UMCS Informatica t. 4] &mdash; dziś na <a href="https://arxiv.org/abs/2607.10444">arXiv:2607.10444</a>.</p>
           </div>
         </div>
         <div class="tl" tabindex="0">

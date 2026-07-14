@@ -199,8 +199,7 @@ og_image_height: 310
         <div class="tl" tabindex="0">
           <div class="tl-inner">
             <div class="yr">2006</div>
-            <p>The covering-systems &harr; stream-alignment bridge is established in peer-reviewed form <a href=
-            "https://www.academia.edu/1840564/Deterministic_method_of_data_sequence_processing">Det. method...</a> .</p>
+            <p>The covering-systems &harr; stream-alignment bridge is established in peer-reviewed form [Annales UMCS Informatica vol. 4] &mdash; now on <a href="https://arxiv.org/abs/2607.10444">arXiv:2607.10444</a>.</p>
           </div>
         </div>
         <div class="tl" tabindex="0">

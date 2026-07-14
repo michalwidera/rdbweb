@@ -20,11 +20,12 @@ To nie jest firma ani zespół z finansowaniem &mdash; to projekt badawczy
 jednej osoby, opublikowany po to, by zawarte w nim idee można było
 wykorzystać, sprawdzić i rozwijać dalej. Dokumentacja pisana jest głównie
 po polsku; komentarze w kodzie również są po polsku. Angielski jest
-używany tutaj, na stronie, oraz w artykule na arXiv.
+używany tutaj, na stronie, oraz w artykułach na arXiv.
 
 - **Autor:** Michal Widera &middot; <a href="mailto:michal@widera.com.pl">michal@widera.com.pl</a>
 - **ORCID:** <a href="https://orcid.org/0000-0002-3578-3792">0000-0002-3578-3792</a>
-- **Artykuł:** <a href="https://arxiv.org/abs/2607.07730">arXiv:2607.07730</a>
+- **Artykuł o silniku:** <a href="https://arxiv.org/abs/2607.07730">arXiv:2607.07730</a>
+- **Artykuł źródłowy (2006):** <a href="https://arxiv.org/abs/2607.10444">arXiv:2607.10444</a>
 - **Kod:** <a href="https://github.com/michalwidera/retractordb">github.com/michalwidera/retractordb</a>
 - **Dokumentacja (PL):** <a href="https://dokumentacja.retractordb.com">dokumentacja.retractordb.com</a>
 
