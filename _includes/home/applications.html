@@ -8,9 +8,13 @@
   </div>
   {% for app in apps %}
   <div class="uc-panel" role="tabpanel" data-uc-panel="{{ forloop.index }}"{% unless forloop.first %} hidden{% endunless %}>
-    <span class="uc-count">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }} / {% if forloop.length < 10 %}0{% endif %}{{ forloop.length }}</span>
+    <div class="uc-head">
+      <span class="uc-icon">{% include home/uc-icons.html icon=app.icon %}</span>
+      <span class="uc-count">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }} / {% if forloop.length < 10 %}0{% endif %}{{ forloop.length }}</span>
+    </div>
     <h3>{{ app.title }}</h3>
     <p>{{ app.text }}</p>
+    <p class="uc-more">{{ app.more }}</p>
   </div>
   {% endfor %}
 </div>

@@ -1,38 +1,88 @@
 - title: Lotnictwo
+  icon: aerospace
   text: >-
     Telemetria z lotów testowych i awioniki: setki czujników o niezgodnych
     częstotliwościach scalane deterministycznie, z odtwarzaniem identycznym co
     do bitu na potrzeby analiz powypadkowych i po locie.
+  more: >-
+    Częstotliwości deklaruje się raz, w zapytaniu, jako dokładne ułamki;
+    jednostka inercyjna 400 Hz i pozycja GPS 1 Hz spotykają się na wspólnej
+    osi czasu bez zgadywania przy przepróbkowaniu. Ten sam zapis odtworzony po
+    roku daje te same bajty, więc wniosek z analizy lotu da się odtworzyć i
+    sprawdzić.
 - title: Motoryzacja
+  icon: automotive
   text: >-
     Sygnały ECU i magistrali pojazdowej wyrównywane bez dryfu
     zmiennoprzecinkowego; powtarzalne przebiegi do walidacji, analityki floty
     i homologacji.
+  more: >-
+    Ramki CAN, LIN i Ethernet przychodzą z niezwiązanymi okresami. Strumienie
+    są wyrównywane arytmetyką wymierną zamiast znaczników czasu zaokrąglanych
+    do milisekund, więc przebieg walidacyjny i jego odtworzenie zgadzają się
+    rekord w rekord &mdash; między kompilacjami, maszynami i kampaniami
+    testowymi.
 - title: Monitoring przemysłowy
+  icon: industrial
   text: >-
     Monitorowanie stanu maszyn i utrzymanie predykcyjne: drgania, prąd i
     temperatura redukowane na brzegu sieci do dokładnych, porównywalnych cech.
+  more: >-
+    Redukcje okienkowe, takie jak średnie, ekstrema i sumy, działają tuż przy
+    czujniku, a z urządzenia wychodzą tylko cechy. Ponieważ każda granica okna
+    jest dokładna, cechy z różnych maszyn i różnych dni pokrywają się i można
+    je porównywać wprost.
 - title: Energetyka i sieci
+  icon: energy
   text: >-
     Synchrofazory, stacje elektroenergetyczne, turbiny wiatrowe: każda
     częstotliwość jest wymierną wielokrotnością częstotliwości sieci, a
     analiza powawaryjna wymaga dokładnych, odtwarzalnych zapisów.
+  more: >-
+    Strumienie próbkowane z wielokrotnością 50 lub 60 Hz przeplatają się bez
+    pełzania fazy. Zapisy zakłóceń trzymają każdą wartość w jej slocie, a
+    brakujące próbki są jawnie oznaczane, a nie po cichu interpolowane &mdash;
+    to ważne, gdy zdarzenie trzeba odtworzyć.
 - title: Audio i nadawanie
+  icon: audio
   text: >-
     44,1 &harr; 48 kHz to dokładnie 147:160 &mdash; wymierna konwersja, którą
     algebra wykonuje bez skumulowanego dryfu, zachowując dokładność sample'i
     w długich łańcuchach.
+  more: >-
+    Konwersja częstotliwości jest operatorem planu, a nie przybliżeniem
+    ukrytym w bibliotece filtrów. Łańcuch konwersji można obejrzeć, a plan
+    pokazuje dokładnie, które próbki zasilają które wyjście, więc długie
+    łańcuchy nadawcze pozostają wyrównane bez okresowej korekty.
 - title: Radio definiowane programowo
+  icon: sdr
   text: >-
     Łańcuchy decymacji i interpolacji z wymiernymi współczynnikami to
     codzienność SDR; tutaj są dokładnymi, deklaratywnymi i inspekcjonowalnymi
     operatorami zapytań.
+  more: >-
+    Decymacja przez 5, a po niej interpolacja przez 3, to zapytanie
+    kompilowane do planu i sprawdzane przed uruchomieniem. Ta sama
+    deklaratywna postać dokumentuje łańcuch, więc odbiornik wykonuje dokładnie
+    ten potok, który przejrzał projektant.
 - title: Robotyka i stanowiska testowe
+  icon: robotics
   text: >-
     Sygnały enkoderów, IMU i siły łączone między różnymi częstotliwościami
     pętli sterowania; testy hardware-in-the-loop odtwarzane bit po bicie na
     potrzeby testów regresyjnych i certyfikacji.
+  more: >-
+    Pętle sterowania 1 kHz, czujniki 200 Hz i logika nadrzędna 10 Hz dzielą
+    jedną dokładną podstawę czasu. Nagrane sesje ze stanowiska odtwarzają się
+    deterministycznie, więc test regresyjny oblewa, bo zmieniło się
+    oprogramowanie, a nie taktowanie.
 - title: Biomedycyna
+  icon: biomedical
   text: >-
     Potoki przetwarzania sygnałów życiowych &mdash; pierwotna domena silnika i
     przykład użyty w artykule &mdash; szczególny przypadek tej samej algebry.
+  more: >-
+    Silnik wyrósł z przetwarzania EKG: wykrywania zespołów QRS w sygnałach
+    zapisanych z różnymi częstotliwościami próbkowania. Przykład na tej
+    stronie &mdash; i w artykule &mdash; to właśnie ten potok, zapisany jako
+    kilka zapytań ciągłych.

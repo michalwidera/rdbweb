@@ -1,37 +1,86 @@
 - title: Aerospace
+  icon: aerospace
   text: >-
     Flight-test and avionics telemetry: hundreds of sensors at mismatched rates
     merged deterministically, with byte-identical replay for post-flight and
     incident analysis.
+  more: >-
+    Rates are declared once, in the query, as exact fractions; a 400 Hz
+    inertial unit and a 1 Hz GPS fix meet on a common timeline with no
+    resampling guesswork. The same recording replayed a year later yields the
+    same bytes, so a finding from a flight review can be re-derived and
+    audited.
 - title: Automotive
+  icon: automotive
   text: >-
     ECU and vehicle-bus signals aligned without floating-point drift;
     reproducible traces for validation, fleet analytics, and homologation.
+  more: >-
+    CAN, LIN and Ethernet frames arrive at unrelated periods. Streams are
+    aligned by rational arithmetic instead of timestamps rounded to
+    milliseconds, so a validation run and its replay agree record for record
+    &mdash; across builds, machines and test campaigns.
 - title: Industrial monitoring
+  icon: industrial
   text: >-
     Machine condition monitoring and predictive maintenance: vibration,
     current, and temperature reduced at the edge to exact, comparable
     features.
+  more: >-
+    Windowed reductions such as averages, extremes and sums run next to the
+    sensor, and only the features leave the device. Because every window
+    boundary is exact, features from different machines and different days
+    line up and can be compared directly.
 - title: Energy &amp; grid
+  icon: energy
   text: >-
     Synchrophasors, substations, wind turbines: every rate is a rational
     multiple of line frequency, and post-fault analysis demands exact,
     replayable records.
+  more: >-
+    Streams sampled at multiples of 50 or 60 Hz interleave without phase
+    creep. Disturbance records keep every value in its slot, and missing
+    samples are marked explicitly rather than silently interpolated, which
+    matters when an event has to be reconstructed.
 - title: Audio &amp; broadcast
+  icon: audio
   text: >-
     44.1 &harr; 48 kHz is exactly 147:160 — a rational conversion the algebra
     performs with zero accumulated drift, keeping long chains sample-accurate.
+  more: >-
+    Rate conversion is a plan operator, not an approximation buried in a
+    filter library. A chain of conversions can be inspected, and the plan
+    shows exactly which samples feed which output, so long broadcast chains
+    stay aligned without periodic correction.
 - title: Software-defined radio
+  icon: sdr
   text: >-
     Decimation and interpolation chains with rational factors are
     SDR&rsquo;s daily bread; here they are exact, declarative, and inspectable
     query operators.
+  more: >-
+    A decimation by 5 followed by an interpolation by 3 is written as a query,
+    compiled into a plan and checked before it runs. The same declarative form
+    documents the chain, so the pipeline a receiver runs is the pipeline its
+    designer reviewed.
 - title: Robotics &amp; test benches
+  icon: robotics
   text: >-
     Encoder, IMU, and force signals fused across control-loop rates;
     hardware-in-the-loop runs replay bit-for-bit for regression testing and
     certification.
+  more: >-
+    Control loops at 1 kHz, sensors at 200 Hz and supervisory logic at 10 Hz
+    share one exact time base. Recorded bench sessions replay
+    deterministically, so a regression test fails because the software
+    changed, not because the timing did.
 - title: Biomedical
+  icon: biomedical
   text: >-
     Vital-sign pipelines — the engine&rsquo;s original domain and the
     paper&rsquo;s worked example, a special case of the same algebra.
+  more: >-
+    The engine grew out of ECG processing: detecting QRS complexes in signals
+    recorded at different sampling rates. The worked example on this page
+    &mdash; and in the paper &mdash; is that pipeline, expressed as a handful
+    of continuous queries.
