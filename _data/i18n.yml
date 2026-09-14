@@ -36,6 +36,11 @@ en:
   home_simple_max_note: >-
     str0 pairs the two sources exactly as in simple; str1 = str0.max keeps the
     larger field of each str0 tuple; str2 = str0 + str1 carries both side by side.
+  home_lang_showcase_note: >-
+    core@(1,2) slides a two-value window over the sequence a, b, a, b… (step 1),
+    so win ticks at &Delta; = 1/20 and core[_] expands into both window slots.
+    peak = MAX(win) keeps the larger one. gap[2] is a stream generator: $ = 0 and 1
+    yield gap$0 = peak &minus; a and gap$1 = peak &minus; b.
   home_legend_decl: "Declaration — source (DECLARE)"
   home_legend_query: "query (SELECT … STREAM)"
   home_legend_prog: "operator program of the query"
@@ -88,6 +93,11 @@ pl:
   home_simple_max_note: >-
     str0 łączy oba źródła dokładnie jak w simple; str1 = str0.max zachowuje
     większe pole każdej krotki str0; str2 = str0 + str1 niesie oba obok siebie.
+  home_lang_showcase_note: >-
+    core@(1,2) przesuwa okno dwóch wartości po ciągu a, b, a, b… (krok 1),
+    więc win ma &Delta; = 1/20, a core[_] rozwija się w oba sloty okna.
+    peak = MAX(win) zachowuje większą z nich. gap[2] to generator strumieni:
+    $ = 0 i 1 dają gap$0 = peak &minus; a oraz gap$1 = peak &minus; b.
   home_legend_decl: "Declaration — źródło (DECLARE)"
   home_legend_query: "zapytanie (SELECT … STREAM)"
   home_legend_prog: "program operatorów zapytania"
