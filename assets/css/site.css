@@ -332,8 +332,7 @@ main.home section.alt{background:var(--hero-bg)}
 main.home .uc-panel h3{font-family:"Ubuntu",sans-serif;font-style:italic;font-weight:500;font-size:34px;line-height:1.15}
 main.home .uc-panel p{margin:0;font-size:19px;line-height:1.65;color:var(--ink-soft);max-width:52ch}
 .uc-head{display:flex;align-items:center;gap:16px}
-.uc-icon{display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:14px;background:var(--hover);color:var(--brand-text);flex:none}
-.uc-icon svg{width:30px;height:30px}
+.uc-head .feature-icon{flex:none}
 main.home .uc-panel p.uc-more{padding-top:18px;border-top:1px solid var(--rule);font-size:16.5px;line-height:1.7;max-width:62ch}
 
 /* lineage */
@@ -358,8 +357,6 @@ main.home .tl-list p{margin:0;padding-bottom:38px;font-size:17px;color:var(--ink
   .hero-in{padding:64px 20px 72px}
   .cards-3{grid-template-columns:minmax(0,1fr)}
   .uc-panel{padding:28px}
-  .uc-icon{width:48px;height:48px}
-  .uc-icon svg{width:26px;height:26px}
   .code-bar{flex-wrap:wrap;padding:6px 10px}
   .code-caption{margin-left:0;padding:0 6px 6px;width:100%}
   .code{padding:22px 20px;font-size:13.5px}
