@@ -11,6 +11,43 @@ en:
   theme_toggle_label: "Toggle light/dark theme"
   lang_toggle_label: "Switch to Polish"
   lang_toggle_short: "PL"
+  nav_label: "Primary navigation"
+  about_url: "/about/"
+  interlace_url: "/interlace/"
+  sum_url: "/sum/"
+  privacy_url: "/privacy/"
+  footer_project: "Project"
+  footer_docs: "Documentation"
+  footer_about: "About"
+  footer_try: "Try it"
+  footer_interlace: "Interlace operator"
+  footer_sum: "Sum operator"
+  footer_policies: "Policies"
+  footer_privacy: "Privacy"
+  home_example: "Example"
+  home_tab_query: "query.rql"
+  home_tab_plan: "Plan DAG"
+  home_tab_tuples: "Tuples"
+  home_tab_output: "Output qrs_out"
+  home_simple_note: >-
+    Each column is one record n of str1 (&Delta; = 1/10). A core1 tuple lasts
+    two slots, so it pairs with two consecutive core0 tuples. At n = 8 the
+    8-record datafile2.dat starts again from its first value.
+  home_simple_max_note: >-
+    str0 pairs the two sources exactly as in simple; str1 = str0.max keeps the
+    larger field of each str0 tuple; str2 = str0 + str1 carries both side by side.
+  home_legend_decl: "Declaration — source (DECLARE)"
+  home_legend_query: "query (SELECT … STREAM)"
+  home_legend_prog: "operator program of the query"
+  home_legend_field: "field program"
+  home_qrs_caption: "Pan–Tompkins QRS detector · MIT-BIH record 205"
+  home_qrs_output_caption: "it_ecg_qrs · MIT-BIH 205 · 1404 records · &Delta; = 1/360 s"
+  home_qrs_cm: ["# 1. bandpass 5–15 Hz — 25-tap FIR convolution", "# 2. derivative — 5-tap FIR", "# 3. squaring", "# 4. moving-window integration — 30 samples", "# 5. adaptive threshold — 180-sample moving average (0.5 s)", "# output: centred ECG, envelope ×5, detection ×5"]
+  home_qrs_top: "qrs_out[0] = MLII − 900"
+  home_qrs_bottom: "qrs_out[1] = mwi × 5   (qrs_out[2] is identical in this window)"
+  home_qrs_x: "t [s] from the first qrs_out record"
+  home_qrs_aria: "Plot of the qrs_out stream"
+  home_qrs_hint: "Hover the plot to read exact record values"
   footer_line: >-
     &copy; Michal Widera &middot; foundations published 2003&ndash;2006 &middot;
     engine developed since 2006, open-sourced 2018 &middot; MIT license &middot;
@@ -26,6 +63,43 @@ pl:
   theme_toggle_label: "Przełącz tryb jasny/ciemny"
   lang_toggle_label: "Switch to English"
   lang_toggle_short: "EN"
+  nav_label: "Nawigacja główna"
+  about_url: "/pl/about/"
+  interlace_url: "/pl/interlace/"
+  sum_url: "/pl/sum/"
+  privacy_url: "/pl/privacy/"
+  footer_project: "Projekt"
+  footer_docs: "Dokumentacja"
+  footer_about: "O projekcie"
+  footer_try: "Wypróbuj"
+  footer_interlace: "Operator interlace"
+  footer_sum: "Operator sum"
+  footer_policies: "Zasady"
+  footer_privacy: "Prywatność"
+  home_example: "Przykład"
+  home_tab_query: "query.rql"
+  home_tab_plan: "Plan DAG"
+  home_tab_tuples: "Krotki"
+  home_tab_output: "Wynik qrs_out"
+  home_simple_note: >-
+    Każda kolumna to jeden rekord n strumienia str1 (&Delta; = 1/10). Krotka
+    core1 trwa dwa sloty, więc łączy się z dwiema kolejnymi krotkami core0.
+    Przy n = 8 plik datafile2.dat (8 rekordów) zaczyna się od pierwszej wartości.
+  home_simple_max_note: >-
+    str0 łączy oba źródła dokładnie jak w simple; str1 = str0.max zachowuje
+    większe pole każdej krotki str0; str2 = str0 + str1 niesie oba obok siebie.
+  home_legend_decl: "Declaration — źródło (DECLARE)"
+  home_legend_query: "zapytanie (SELECT … STREAM)"
+  home_legend_prog: "program operatorów zapytania"
+  home_legend_field: "program pola"
+  home_qrs_caption: "Detektor QRS Pan–Tompkinsa · rekord MIT-BIH 205"
+  home_qrs_output_caption: "it_ecg_qrs · MIT-BIH 205 · 1404 rekordy · &Delta; = 1/360 s"
+  home_qrs_cm: ["# 1. filtr pasmowoprzepustowy 5–15 Hz — splot FIR, 25 odczepów", "# 2. różniczkowanie — FIR, 5 odczepów", "# 3. kwadrat", "# 4. całkowanie w oknie ruchomym — 30 próbek", "# 5. próg adaptacyjny — średnia ruchoma 180 próbek (0,5 s)", "# wyjście: EKG wycentrowane, obwiednia ×5, detekcja ×5"]
+  home_qrs_top: "qrs_out[0] = MLII − 900"
+  home_qrs_bottom: "qrs_out[1] = mwi × 5   (qrs_out[2] identyczne w tym oknie)"
+  home_qrs_x: "t [s] od pierwszego rekordu qrs_out"
+  home_qrs_aria: "Wykres strumienia qrs_out"
+  home_qrs_hint: "Najedź na wykres, aby odczytać dokładne wartości rekordów"
   footer_line: >-
     &copy; Michal Widera &middot; fundamenty opublikowane 2003&ndash;2006 &middot;
     silnik rozwijany od 2006, open source od 2018 &middot; licencja MIT &middot;

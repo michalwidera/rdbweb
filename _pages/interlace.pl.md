@@ -11,8 +11,7 @@ excerpt: "Połącz dwa ciągi o dwóch różnych częstotliwościach i zobacz, j
 Podaj dwa ciągi oraz częstotliwość, z jaką każdy z nich napływa (jako
 liczbę wymierną, np. `2/3`, lub dziesiętną, np. `0.5`). Operator scala je
 w jeden połączony ciąg o połączonej częstotliwości
-&Delta;c = &Delta;1&middot;&Delta;2 / (&Delta;1+&Delta;2) &mdash; ta sama
-reguła stoi za <a href="/pl/#idea">diagramem scalania</a> na stronie głównej.
+&Delta;c = &Delta;1&middot;&Delta;2 / (&Delta;1+&Delta;2).
 
 <div class="panel-card operator-demo">
   <form id="interlaceForm">
