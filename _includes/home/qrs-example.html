@@ -31,7 +31,7 @@ Wygenerowane z artefaktow retractordb (nie edytowac recznie liczb):
       <div class="cm">{{ t.home_qrs_cm[4] }}</div>
       <div><span class="kw">SELECT</span> int(mwi[0]) <span class="kw">STREAM</span> mwi_thr <span class="kw">FROM</span> AVG(mwi@(1,180))</div>
       <div class="cm">{{ t.home_qrs_cm[5] }}</div>
-      <div><span class="kw">SELECT</span> mlii[0]-900, mwi[0]*5, (mwi[0]-mwi_thr[0]*2)*5 <span class="kw">STREAM</span> qrs_out <span class="kw">FROM</span> mlii+mwi+mwi_thr</div>
+      <div><span class="kw">SELECT</span> mlii[0]-900, mwi[0]*5, (mwi[0]-mwi_thr[0]*2)*5 <span class="kw">STREAM</span> qrs_out <span class="kw">FROM</span> mlii+mwi+mwi_thr <span class="kw">PERSISTENT</span></div>
     </div>
   </div>
   <div class="code-panel" role="tabpanel" data-tab="output" data-caption="{{ t.home_qrs_output_caption }}" hidden>
