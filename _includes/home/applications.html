@@ -1,0 +1,16 @@
+{% assign apps = site.data.applications %}
+{% if include.lang == "pl" %}{% assign apps = site.data.applications_pl %}{% endif %}
+<div class="uc" data-uc-root>
+  <div class="uc-list" role="tablist">
+    {% for app in apps %}
+    <button class="uc-item{% if forloop.first %} on{% endif %}" type="button" role="tab" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" data-uc="{{ forloop.index }}">{{ app.title }}</button>
+    {% endfor %}
+  </div>
+  {% for app in apps %}
+  <div class="uc-panel" role="tabpanel" data-uc-panel="{{ forloop.index }}"{% unless forloop.first %} hidden{% endunless %}>
+    <span class="uc-count">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }} / {% if forloop.length < 10 %}0{% endif %}{{ forloop.length }}</span>
+    <h3>{{ app.title }}</h3>
+    <p>{{ app.text }}</p>
+  </div>
+  {% endfor %}
+</div>

@@ -11,8 +11,7 @@ excerpt: "Combine two sequences at two different rates and watch the interlace o
 Enter two sequences and the rate each one arrives at (as a rational
 number, e.g. `2/3`, or a decimal, e.g. `0.5`). The operator interlaces
 them into a single combined sequence at the merged rate
-&Delta;c = &Delta;1&middot;&Delta;2 / (&Delta;1+&Delta;2) &mdash; the
-same rule behind the homepage's <a href="/#idea">merge diagram</a>.
+&Delta;c = &Delta;1&middot;&Delta;2 / (&Delta;1+&Delta;2).
 
 <div class="panel-card operator-demo">
   <form id="interlaceForm">
