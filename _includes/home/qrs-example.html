@@ -12,26 +12,26 @@ Wygenerowane z artefaktow retractordb (nie edytowac recznie liczb):
   </div>
   <div class="code-panel" role="tabpanel" data-tab="query" data-caption="{{ t.home_qrs_caption }}">
     <div class="code code-sm">
-      <div><span class="kw">SUBSTRAT</span> 'memory'</div>
+      <div><span class="kw">DEFAULT</span> <span class="kw">VOLATILE</span></div>
       <div><span class="kw">DECLARE</span> MLII INTEGER, V1 INTEGER <span class="kw">STREAM</span> ecg, 1/360 <span class="kw">FILE</span> 'rec205'</div>
       <div><span class="kw">DECLARE</span> bp_coef INTEGER[25] <span class="kw">STREAM</span> bpf, 1 <span class="kw">FILE</span> 'bp_coef.txt'</div>
       <div><span class="kw">DECLARE</span> d_coef INTEGER[5] <span class="kw">STREAM</span> df, 1 <span class="kw">FILE</span> 'd_coef.txt'</div>
-      <div><span class="kw">SELECT</span> ecg.MLII <span class="kw">STREAM</span> mlii <span class="kw">FROM</span> ecg <span class="kw">VOLATILE</span></div>
+      <div><span class="kw">SELECT</span> ecg.MLII <span class="kw">STREAM</span> mlii <span class="kw">FROM</span> ecg</div>
       <div class="gap"></div>
       <div class="cm">{{ t.home_qrs_cm[0] }}</div>
-      <div><span class="kw">SELECT</span> mlii[_]*bpf[_] <span class="kw">STREAM</span> bp_acc <span class="kw">FROM</span> mlii@(1,25)+bpf <span class="kw">VOLATILE</span></div>
-      <div><span class="kw">SELECT</span> int(bp_acc[0]/1000) <span class="kw">STREAM</span> bp_out <span class="kw">FROM</span> SUMC(bp_acc) <span class="kw">VOLATILE</span></div>
+      <div><span class="kw">SELECT</span> mlii[_]*bpf[_] <span class="kw">STREAM</span> bp_acc <span class="kw">FROM</span> mlii@(1,25)+bpf</div>
+      <div><span class="kw">SELECT</span> int(bp_acc[0]/1000) <span class="kw">STREAM</span> bp_out <span class="kw">FROM</span> SUMC(bp_acc)</div>
       <div class="cm">{{ t.home_qrs_cm[1] }}</div>
-      <div><span class="kw">SELECT</span> bp_out[_]*df[_] <span class="kw">STREAM</span> d_acc <span class="kw">FROM</span> bp_out@(1,5)+df <span class="kw">VOLATILE</span></div>
-      <div><span class="kw">SELECT</span> int(d_acc[0]) <span class="kw">STREAM</span> d_out <span class="kw">FROM</span> SUMC(d_acc) <span class="kw">VOLATILE</span></div>
+      <div><span class="kw">SELECT</span> bp_out[_]*df[_] <span class="kw">STREAM</span> d_acc <span class="kw">FROM</span> bp_out@(1,5)+df</div>
+      <div><span class="kw">SELECT</span> int(d_acc[0]) <span class="kw">STREAM</span> d_out <span class="kw">FROM</span> SUMC(d_acc)</div>
       <div class="cm">{{ t.home_qrs_cm[2] }}</div>
-      <div><span class="kw">SELECT</span> d_out[0]^2/1000 <span class="kw">STREAM</span> sq_out <span class="kw">FROM</span> d_out <span class="kw">VOLATILE</span></div>
+      <div><span class="kw">SELECT</span> d_out[0]^2/1000 <span class="kw">STREAM</span> sq_out <span class="kw">FROM</span> d_out</div>
       <div class="cm">{{ t.home_qrs_cm[3] }}</div>
-      <div><span class="kw">SELECT</span> int(sq_out[0]) <span class="kw">STREAM</span> mwi <span class="kw">FROM</span> AVG(sq_out@(1,30)) <span class="kw">VOLATILE</span></div>
+      <div><span class="kw">SELECT</span> int(sq_out[0]) <span class="kw">STREAM</span> mwi <span class="kw">FROM</span> AVG(sq_out@(1,30))</div>
       <div class="cm">{{ t.home_qrs_cm[4] }}</div>
-      <div><span class="kw">SELECT</span> int(mwi[0]) <span class="kw">STREAM</span> mwi_thr <span class="kw">FROM</span> AVG(mwi@(1,180)) <span class="kw">VOLATILE</span></div>
+      <div><span class="kw">SELECT</span> int(mwi[0]) <span class="kw">STREAM</span> mwi_thr <span class="kw">FROM</span> AVG(mwi@(1,180))</div>
       <div class="cm">{{ t.home_qrs_cm[5] }}</div>
-      <div><span class="kw">SELECT</span> mlii[0]-900, mwi[0]*5, (mwi[0]-mwi_thr[0]*2)*5 <span class="kw">STREAM</span> qrs_out <span class="kw">FROM</span> mlii+mwi+mwi_thr <span class="kw">VOLATILE</span></div>
+      <div><span class="kw">SELECT</span> mlii[0]-900, mwi[0]*5, (mwi[0]-mwi_thr[0]*2)*5 <span class="kw">STREAM</span> qrs_out <span class="kw">FROM</span> mlii+mwi+mwi_thr</div>
     </div>
   </div>
   <div class="code-panel" role="tabpanel" data-tab="output" data-caption="{{ t.home_qrs_output_caption }}" hidden>
