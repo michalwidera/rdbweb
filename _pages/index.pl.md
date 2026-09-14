@@ -46,18 +46,24 @@ og_image_height: 310
       </p>
       <div class="cards-3">
         <div class="feature">
-          <span class="feature-icon">{% include home/feature-icons.html icon="exact" %}</span>
-          <h3>Dokładność</h3>
+          <div class="feature-head">
+            <h3>Dokładność</h3>
+            <span class="feature-icon">{% include home/feature-icons.html icon="exact" %}</span>
+          </div>
           <p>Kluczowe operatory są dowiedzione w arytmetyce liczb wymiernych. Bez dryfu zmiennoprzecinkowego, bez przybliżeń — dla dowolnej pary regularnych częstotliwości.</p>
         </div>
         <div class="feature">
-          <span class="feature-icon">{% include home/feature-icons.html icon="reversible" %}</span>
-          <h3>Odwracalność</h3>
+          <div class="feature-head">
+            <h3>Odwracalność</h3>
+            <span class="feature-icon">{% include home/feature-icons.html icon="reversible" %}</span>
+          </div>
           <p>Połączony strumień zawsze da się rozdzielić na dokładnie te dwa zegary, z których powstał. Scalanie i rozdzielanie są operacjami odwrotnymi; znak nożyc to narysowane rozdzielenie.</p>
         </div>
         <div class="feature">
-          <span class="feature-icon">{% include home/feature-icons.html icon="replay" %}</span>
-          <h3>Powtarzalność</h3>
+          <div class="feature-head">
+            <h3>Powtarzalność</h3>
+            <span class="feature-icon">{% include home/feature-icons.html icon="replay" %}</span>
+          </div>
           <p>Odtwórz to samo nagranie dwa razy, a wynik będzie identyczny co do bitu — właściwość stale sprawdzana w CI.</p>
         </div>
       </div>

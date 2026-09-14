@@ -45,18 +45,24 @@ og_image_height: 310
       </p>
       <div class="cards-3">
         <div class="feature">
-          <span class="feature-icon">{% include home/feature-icons.html icon="exact" %}</span>
-          <h3>Exact</h3>
+          <div class="feature-head">
+            <h3>Exact</h3>
+            <span class="feature-icon">{% include home/feature-icons.html icon="exact" %}</span>
+          </div>
           <p>Core operators are proved correct over rational arithmetic. No floating-point drift, no approximation — for any pair of regular rates.</p>
         </div>
         <div class="feature">
-          <span class="feature-icon">{% include home/feature-icons.html icon="reversible" %}</span>
-          <h3>Reversible</h3>
+          <div class="feature-head">
+            <h3>Reversible</h3>
+            <span class="feature-icon">{% include home/feature-icons.html icon="reversible" %}</span>
+          </div>
           <p>The combined stream always splits back into the exact two clocks it came from. Merge and split are exact opposites; the scissors mark is that split, drawn.</p>
         </div>
         <div class="feature">
-          <span class="feature-icon">{% include home/feature-icons.html icon="replay" %}</span>
-          <h3>Replay-stable</h3>
+          <div class="feature-head">
+            <h3>Replay-stable</h3>
+            <span class="feature-icon">{% include home/feature-icons.html icon="replay" %}</span>
+          </div>
           <p>Replay the same recording twice and get the identical result down to the bit — a property exercised continuously in CI.</p>
         </div>
       </div>

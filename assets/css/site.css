@@ -307,7 +307,9 @@ main.home .hero .lede{max-width:62ch;font-size:19.5px;color:var(--ink-soft);marg
 .feature{box-shadow:var(--soft-shadow)}
 .feature-icon{display:flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:12px;background:var(--hover);color:var(--brand-text)}
 .feature-icon svg{width:26px;height:26px}
-main.home .feature h3{margin:6px 0 0;font-family:"Ubuntu",sans-serif;font-style:italic;font-weight:500;font-size:24px;line-height:1.2}
+.feature-head{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.feature-head .feature-icon{flex:none}
+main.home .feature h3{margin:0;font-family:"Ubuntu",sans-serif;font-style:italic;font-weight:500;font-size:24px;line-height:1.2}
 main.home .feature p,main.home .bin p{margin:0;max-width:none;color:var(--ink-soft);font-size:16px;text-wrap:pretty}
 .bin{padding:28px}
 main.home .bin h3{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:19px}
@@ -329,9 +331,9 @@ main.home section.alt{background:var(--hero-bg)}
 .uc-panel{display:flex;flex-direction:column;justify-content:center;gap:18px;padding:48px 56px;background:var(--panel);border:1px solid var(--rule);border-radius:14px;box-shadow:var(--shadow)}
 .uc-panel[hidden]{display:none}
 .uc-count{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--ink-soft)}
-main.home .uc-panel h3{font-family:"Ubuntu",sans-serif;font-style:italic;font-weight:500;font-size:34px;line-height:1.15}
+main.home .uc-panel h3{margin:0;font-family:"Ubuntu",sans-serif;font-style:italic;font-weight:500;font-size:34px;line-height:1.15}
 main.home .uc-panel p{margin:0;font-size:19px;line-height:1.65;color:var(--ink-soft);max-width:52ch}
-.uc-head{display:flex;align-items:center;gap:16px}
+.uc-head{display:flex;align-items:center;justify-content:space-between;gap:16px}
 .uc-head .feature-icon{flex:none}
 main.home .uc-panel p.uc-more{padding-top:18px;border-top:1px solid var(--rule);font-size:16.5px;line-height:1.7;max-width:62ch}
 
