@@ -35,8 +35,10 @@ excerpt: "RetractorDB is a solo research project: open for people, built to earn
       <p class="body">
         This is not a company or a funded team &mdash; it&rsquo;s one person&rsquo;s research
         project, published so the ideas in it can be used, checked, and built
-        upon. Documentation is written primarily in Polish; code comments are in
-        Polish too. English is used here, on the website, and in the arXiv papers.
+        upon. Documentation is written in Polish and translated automatically
+        into English. English is the language the system uses to communicate
+        with the user, and the arXiv papers are in English as well. Code
+        comments appear in both languages.
       </p>
       <div class="cards-3">
         <div class="feature">
@@ -49,7 +51,7 @@ excerpt: "RetractorDB is a solo research project: open for people, built to earn
         </div>
         <div class="feature">
           <h3>Code and docs</h3>
-          <p>Code: <a href="https://github.com/michalwidera/retractordb">github.com/michalwidera/retractordb</a><br>Docs (PL): <a href="https://dokumentacja.retractordb.com">dokumentacja.retractordb.com</a></p>
+          <p>Code: <a href="https://github.com/michalwidera/retractordb">github.com/michalwidera/retractordb</a><br>Docs (EN): <a href="https://documentation.retractordb.com">documentation.retractordb.com</a><br>Docs (PL): <a href="https://dokumentacja.retractordb.com">dokumentacja.retractordb.com</a></p>
         </div>
       </div>
     </div>

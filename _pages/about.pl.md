@@ -36,9 +36,10 @@ excerpt: "RetractorDB to jednoosobowy projekt badawczy: otwarty dla ludzi, tworz
       <p class="body">
         To nie jest firma ani zespół z finansowaniem &mdash; to projekt badawczy
         jednej osoby, opublikowany po to, by zawarte w nim idee można było
-        wykorzystać, sprawdzić i rozwijać dalej. Dokumentacja pisana jest głównie
-        po polsku; komentarze w kodzie również są po polsku. Angielski jest
-        używany tutaj, na stronie, oraz w artykułach na arXiv.
+        wykorzystać, sprawdzić i rozwijać dalej. Dokumentacja pisana jest po
+        polsku i tłumaczona automatycznie na język angielski. Angielski jest
+        językiem, w którym system komunikuje się z użytkownikiem; po angielsku
+        są też artykuły na arXiv. Komentarze w kodzie występują w obu językach.
       </p>
       <div class="cards-3">
         <div class="feature">
@@ -51,7 +52,7 @@ excerpt: "RetractorDB to jednoosobowy projekt badawczy: otwarty dla ludzi, tworz
         </div>
         <div class="feature">
           <h3>Kod i dokumentacja</h3>
-          <p>Kod: <a href="https://github.com/michalwidera/retractordb">github.com/michalwidera/retractordb</a><br>Dokumentacja (PL): <a href="https://dokumentacja.retractordb.com">dokumentacja.retractordb.com</a></p>
+          <p>Kod: <a href="https://github.com/michalwidera/retractordb">github.com/michalwidera/retractordb</a><br>Dokumentacja (PL): <a href="https://dokumentacja.retractordb.com">dokumentacja.retractordb.com</a><br>Dokumentacja (EN): <a href="https://documentation.retractordb.com">documentation.retractordb.com</a></p>
         </div>
       </div>
     </div>
