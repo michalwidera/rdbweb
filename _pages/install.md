@@ -1,106 +1,180 @@
 ---
-layout: default
+layout: home
 permalink: /install/
 lang: en
 lang_alt: /pl/install/
 title: "Install RetractorDB"
-eyebrow: "Linux CLI"
 excerpt: "Install, update or remove RetractorDB from a GitHub release on x86-64 or ARM64 Linux."
 ---
 
-The installer downloads a published portable CLI archive from
-[GitHub Releases](https://github.com/michalwidera/retractordb/releases).
-It detects x86-64 or ARM64 (`aarch64`), checks the archive's SHA-256 digest,
-ELF architecture and runtime compatibility, then installs the three commands:
-`xretractor`, `xqry` and `xtrdb`. A systemd service is available on request.
-The archive also includes a `retractor.toml` with safe default settings.
+<main class="home">
 
-These commands require a published `*-portable.tar.gz` archive for your CPU.
-Run `list` to check available versions; until those archives are added to
-GitHub Releases, the list will be empty.
+  <section class="hero">
+    <div class="hero-in">
+      <span class="sec-eyebrow">Linux CLI &nbsp;·&nbsp; x86-64 and ARM64</span>
+      <h1>One command.<br>Three binaries, <em>verified</em>.</h1>
+      <p class="lede">
+        The installer downloads a published portable CLI archive from GitHub
+        Releases, detects x86-64 or ARM64 (<code>aarch64</code>), checks the
+        archive&rsquo;s SHA-256 digest, ELF architecture and runtime
+        compatibility, then installs <code>xretractor</code>, <code>xqry</code>
+        and <code>xtrdb</code>. A systemd service is available on request.
+      </p>
 
-Run this in a terminal for a user install in `~/.local`:
+      <div class="example" data-tabs-root>
+        <div class="code-card">
+          <div class="code-bar" role="tablist">
+            <button class="tab on" type="button" role="tab" aria-selected="true" data-tab="user">User</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-tab="system">System</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-tab="service">System + service</button>
+            <span class="code-caption" data-caption>~/.local</span>
+          </div>
+          <div class="code-panel" role="tabpanel" data-tab="user" data-caption="~/.local">
+            <div class="code">
+              <div>curl -fsSL https://retractordb.com/install.sh | bash -s -- install --user</div>
+              <div class="gap"></div>
+              <div><span class="cm"># commands are linked from ~/.local/bin; add it to PATH if asked</span></div>
+              <div>xretractor --build-info</div>
+            </div>
+          </div>
+          <div class="code-panel" role="tabpanel" data-tab="system" data-caption="/usr/local" hidden>
+            <div class="code">
+              <div>curl -fsSL https://retractordb.com/install.sh | sudo bash -s -- install --system</div>
+            </div>
+          </div>
+          <div class="code-panel" role="tabpanel" data-tab="service" data-caption="/usr/local  ·  systemd" hidden>
+            <div class="code">
+              <div>curl -fsSL https://retractordb.com/install.sh | sudo bash -s -- install --system --service</div>
+              <div>systemctl status xretractor.service</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-```bash
-curl -fsSL https://retractordb.com/install.sh | bash -s -- install --user
-```
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://github.com/michalwidera/retractordb/releases">{% include icons/github.svg %}GitHub Releases</a>
+        <a class="btn btn-ghost" href="#review">Review the script first</a>
+      </div>
+      <span class="hero-note">
+        Requires a published <code>*-portable.tar.gz</code> archive for your CPU &nbsp;·&nbsp;
+        run <code>list</code> to check; until those archives are added, the list is empty
+      </span>
+    </div>
+  </section>
 
-The commands are linked from `~/.local/bin`. Add that directory to `PATH`
-if the installer asks you to. Check the result with `xretractor --build-info`.
+  <section id="what">
+    <div class="home-in">
+      <span class="sec-eyebrow">What it does</span>
+      <h2>Checks first, installs second, keeps what is yours</h2>
+      <div class="cards-3">
+        <div class="feature">
+          <h3>Checked</h3>
+          <p>SHA-256 digest, ELF architecture and runtime compatibility are verified before anything is installed. On an ARM 32-bit host, a musl-based distribution, or a host with an older <code>glibc</code>/<code>libstdc++</code> than the release requires, the check stops and shows the cause &mdash; such hosts may need a dedicated build.</p>
+        </div>
+        <div class="feature">
+          <h3>Configured</h3>
+          <p>The archive includes a <code>retractor.toml</code> with safe default settings. It is copied to <code>/etc/retractor/retractor.toml</code> for a system install, or to <code>~/.config/retractor/retractor.toml</code> (or <code>XDG_CONFIG_HOME</code>) for a user install &mdash; only when absent. <code>xretractor</code> reads it at startup, including as a service.</p>
+        </div>
+        <div class="feature">
+          <h3>Preserved</h3>
+          <p>Upgrades and removal keep local configuration, query files and the service account. The installer only removes binaries and the unit it created. The shipped <code>storage.dir</code> line stays commented until you create a writable storage directory.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-For a system-wide CLI install in `/usr/local`, run:
+  <section id="service" class="alt">
+    <div class="home-in">
+      <span class="sec-eyebrow">systemd</span>
+      <h2>Run xretractor as a system service</h2>
+      <p class="body">
+        Add <code>--service</code> to a system install if this host runs
+        systemd. The installer creates the <code>retractor</code> service
+        account and an empty <code>/etc/retractor/startup.rql</code> when
+        absent &mdash; the empty file starts the engine in idle mode. Existing
+        query and configuration files are left untouched. For a service, the
+        install path must be owned by root and not writable by other users.
+      </p>
+      <div class="code-card code-card-soft">
+        <div class="code-bar">
+          <span class="tab on">managed service</span>
+          <span class="code-caption">--system</span>
+        </div>
+        <div class="code">
+          <div><span class="cm"># the service keeps running after an upgrade</span></div>
+          <div>curl -fsSL https://retractordb.com/install.sh | sudo bash -s -- upgrade --system</div>
+          <div class="gap"></div>
+          <div><span class="cm"># removes the unit; query files and the service account remain</span></div>
+          <div>curl -fsSL https://retractordb.com/install.sh | sudo bash -s -- uninstall --system</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-```bash
-curl -fsSL https://retractordb.com/install.sh | sudo bash -s -- install --system
-```
+  <section id="versions">
+    <div class="home-in">
+      <span class="sec-eyebrow">Versions and maintenance</span>
+      <h2>Pick a version, upgrade, check, remove</h2>
+      <p class="body">
+        The default is the newest stable release with an archive for your
+        CPU. <code>upgrade</code> can also take <code>--version</code>.
+      </p>
+      <div class="code-card code-card-soft">
+        <div class="code-bar">
+          <span class="tab on">maintenance</span>
+          <span class="code-caption">--user</span>
+        </div>
+        <div class="code">
+          <div>curl -fsSL https://retractordb.com/install.sh | bash -s -- list</div>
+          <div>curl -fsSL https://retractordb.com/install.sh | bash -s -- install --version 0.1.10 --user</div>
+          <div>curl -fsSL https://retractordb.com/install.sh | bash -s -- upgrade --user</div>
+          <div>curl -fsSL https://retractordb.com/install.sh | bash -s -- status --user</div>
+          <div>curl -fsSL https://retractordb.com/install.sh | bash -s -- uninstall --user</div>
+        </div>
+      </div>
+      <p class="note">
+        For a custom directory, use <code>--prefix /absolute/path</code> and
+        supply the same prefix when upgrading or removing. If both user and
+        system installations exist, the installer asks which one to manage.
+      </p>
+    </div>
+  </section>
 
-Add `--service` if this host runs systemd and you want `xretractor` to start
-as a system service:
+  <section id="review" class="alt">
+    <div class="home-in">
+      <span class="sec-eyebrow">Before you pipe to bash</span>
+      <h2>Read the script, then run it</h2>
+      <div class="code-card code-card-soft">
+        <div class="code">
+          <div>curl -fsSLO https://retractordb.com/install.sh</div>
+          <div>less install.sh</div>
+          <div>bash install.sh install --user</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-```bash
-curl -fsSL https://retractordb.com/install.sh | sudo bash -s -- install --system --service
-systemctl status xretractor.service
-```
+  <section id="debian">
+    <div class="lineage">
+      <div class="lineage-head">
+        <span class="sec-eyebrow">Debian or Ubuntu with systemd</span>
+        <h2>Prefer a distribution-managed service?</h2>
+      </div>
+      <div>
+        <p>
+          Use the <code>.deb</code> from
+          <a href="https://github.com/michalwidera/retractordb/releases">GitHub Releases</a>
+          through <code>apt</code>. It installs into <code>/usr/bin</code> and
+          enables the service for the next boot. Manage upgrades and removal
+          with <code>apt</code> as well; the portable installer does not manage
+          Debian packages.
+        </p>
+        <p>
+          <strong>Do not install both service variants on one host:</strong>
+          they use the same unit name.
+        </p>
+      </div>
+    </div>
+  </section>
 
-For a service, the install path must be owned by root and not writable by
-other users.
-
-Later, upgrade or remove this managed service with:
-
-```bash
-curl -fsSL https://retractordb.com/install.sh | sudo bash -s -- upgrade --system
-curl -fsSL https://retractordb.com/install.sh | sudo bash -s -- uninstall --system
-```
-
-The installer creates the `retractor` service account and an empty
-`/etc/retractor/startup.rql` when absent. The empty file starts the engine
-in idle mode. It preserves existing query and configuration files.
-
-For a system install, the installer copies `retractor.toml` to
-`/etc/retractor/retractor.toml`. For a user install, it uses
-`~/.config/retractor/retractor.toml` or `XDG_CONFIG_HOME`. It only creates
-the file when absent. `xretractor` automatically reads it at startup,
-including when started as a service. Upgrades and removal preserve local
-configuration. The shipped `storage.dir` line stays commented until you
-create a writable storage directory.
-
-To review the script before executing it, download it first:
-
-```bash
-curl -fsSLO https://retractordb.com/install.sh
-less install.sh
-bash install.sh install --user
-```
-
-## Versions and maintenance
-
-The default is the newest stable release with an archive for your CPU.
-You can inspect available versions and select one explicitly:
-
-```bash
-curl -fsSL https://retractordb.com/install.sh | bash -s -- list
-curl -fsSL https://retractordb.com/install.sh | bash -s -- install --version 0.1.10 --user
-curl -fsSL https://retractordb.com/install.sh | bash -s -- upgrade --user
-curl -fsSL https://retractordb.com/install.sh | bash -s -- status --user
-curl -fsSL https://retractordb.com/install.sh | bash -s -- uninstall --user
-```
-
-`upgrade` can also take `--version`. A managed service keeps running after
-an upgrade and is removed by `uninstall`; its query files and service account
-remain. The installer only removes binaries and the unit it created.
-For a custom directory, use
-`--prefix /absolute/path`; supply the same prefix when upgrading or removing.
-If both user and system installations exist, it asks which one to manage.
-
-An ARM 32-bit host, a musl-based distribution, or a host with an older
-`glibc`/`libstdc++` than the release requires may need a dedicated build.
-The compatibility check stops before installation and shows the cause.
-
-## Debian or Ubuntu with systemd
-
-If you prefer a distribution-managed `xretractor` service, use the `.deb` from
-[GitHub Releases](https://github.com/michalwidera/retractordb/releases)
-through `apt`. The `.deb` installs into `/usr/bin` and enables the service
-for the next boot. Manage upgrades and removal with `apt` as well; the
-portable installer does not manage Debian packages. Do not install both
-service variants on one host: they use the same unit name.
+</main>
