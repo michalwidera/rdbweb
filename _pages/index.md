@@ -26,6 +26,7 @@ og_image_height: 310
       </p>
       <div class="cta-row">
         <a class="btn btn-primary" href="https://arxiv.org/abs/2607.07730">Read the paper</a>
+        <a class="btn btn-ghost" href="/install/">Install on Linux</a>
         <a class="btn btn-ghost" href="https://github.com/michalwidera/retractordb">{% include icons/github.svg %}View on GitHub</a>
       </div>
       <span class="hero-note">arXiv:2607.07730 &nbsp;·&nbsp; MIT license</span>
