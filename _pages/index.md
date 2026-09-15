@@ -50,7 +50,7 @@ og_image_height: 310
             <h3>Exact</h3>
             <span class="feature-icon">{% include home/feature-icons.html icon="exact" %}</span>
           </div>
-          <p>Core operators are proved correct over rational arithmetic. No floating-point drift, no approximation — for any pair of regular rates.</p>
+          <p>Core operators are proved correct over rational arithmetic. No floating-point drift, no approximation — for any pair of regular intervals.</p>
         </div>
         <div class="feature">
           <div class="feature-head">
@@ -151,7 +151,7 @@ og_image_height: 310
       <ol class="tl-list">
         <li>
           <span class="tl-year">1926</span><span class="tl-dot"></span>
-          <p>Beatty shows two sequences &lfloor;np&rfloor;, &lfloor;nq&rfloor; partition &#8469; for irrational rates.</p>
+          <p>Beatty shows two sequences &lfloor;np&rfloor;, &lfloor;nq&rfloor; partition &#8469; for irrational p, q.</p>
         </li>
         <li>
           <span class="tl-year">1969</span><span class="tl-dot"></span>

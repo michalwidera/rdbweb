@@ -51,7 +51,7 @@ og_image_height: 310
             <h3>Dokładność</h3>
             <span class="feature-icon">{% include home/feature-icons.html icon="exact" %}</span>
           </div>
-          <p>Kluczowe operatory są dowiedzione w arytmetyce liczb wymiernych. Bez dryfu zmiennoprzecinkowego, bez przybliżeń — dla dowolnej pary regularnych częstotliwości.</p>
+          <p>Kluczowe operatory są dowiedzione w arytmetyce liczb wymiernych. Bez dryfu zmiennoprzecinkowego, bez przybliżeń — dla dowolnej pary regularnych odstępów.</p>
         </div>
         <div class="feature">
           <div class="feature-head">
@@ -152,7 +152,7 @@ og_image_height: 310
       <ol class="tl-list">
         <li>
           <span class="tl-year">1926</span><span class="tl-dot"></span>
-          <p>Beatty pokazuje, że dwa ciągi &lfloor;np&rfloor;, &lfloor;nq&rfloor; dzielą &#8469; dla niewymiernych częstotliwości.</p>
+          <p>Beatty pokazuje, że dwa ciągi &lfloor;np&rfloor;, &lfloor;nq&rfloor; dzielą &#8469; dla niewymiernych p, q.</p>
         </li>
         <li>
           <span class="tl-year">1969</span><span class="tl-dot"></span>
