@@ -2,7 +2,7 @@
 # Page body copy is translated per-page, not here.
 en:
   nav_paper: "Paper"
-  nav_docs: "Docs"
+  nav_docs: "Documentation"
   nav_github: "GitHub"
   nav_pdf: "Download the English PDF documentation"
   nav_trademark: "Trademark"
