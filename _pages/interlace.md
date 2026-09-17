@@ -142,7 +142,7 @@ excerpt: "Combine two sequences with two different intervals and watch the inter
       var r2 = parseRational(document.getElementById('il-rate-b').value);
       var r3 = (r1 * r2) / (r1 + r2);
       // selection weight (share of B in the merge), distinct from the
-      // combined output interval r3 — see the implementation docs
+      // combined output interval r3 - see the implementation docs
       var delta = r2 / (r1 + r2);
 
       var combined = [];

@@ -45,7 +45,7 @@
 - title: Audio &amp; broadcast
   icon: audio
   text: >-
-    44.1 &harr; 48 kHz is exactly 147:160 — a rational conversion the algebra
+    44.1 &harr; 48 kHz is exactly 147:160 - a rational conversion the algebra
     performs with zero accumulated drift, keeping long chains sample-accurate.
   more: >-
     Rate conversion is a plan operator, not an approximation buried in a
@@ -77,7 +77,7 @@
 - title: Biomedical
   icon: biomedical
   text: >-
-    Vital-sign pipelines — the engine&rsquo;s original domain and the
+    Vital-sign pipelines - the engine&rsquo;s original domain and the
     paper&rsquo;s worked example, a special case of the same algebra.
   more: >-
     The engine grew out of ECG processing: detecting QRS complexes in signals

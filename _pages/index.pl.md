@@ -4,8 +4,8 @@ permalink: /pl/
 lang: pl
 lang_alt: /
 title: "RetractorDB"
-seo_title: "RetractorDB — Regularne strumienie. Determinizm u podstawy."
-excerpt: "RetractorDB to otwartoźródłowy Deterministyczny Brzegowy Silnik Przetwarzania Sygnałów, którego operatory resamplingu są dowiedzione jako dokładne — oparte na wymiernych ciągach Beatty'ego i twierdzeniu o podziale Fraenkla."
+seo_title: "RetractorDB - Regularne strumienie. Determinizm u podstawy."
+excerpt: "RetractorDB to otwartoźródłowy Deterministyczny Brzegowy Silnik Przetwarzania Sygnałów, którego operatory resamplingu są dowiedzione jako dokładne - oparte na wymiernych ciągach Beatty'ego i twierdzeniu o podziale Fraenkla."
 og_image: "/assets/images/icon/ms-icon-310x310.png"
 og_image_width: 310
 og_image_height: 310
@@ -20,7 +20,7 @@ og_image_height: 310
       <p class="lede">
         RetractorDB scala i resampluje regularne szeregi czasowe bez błędu
         przybliżenia. Jego kluczowe operatory są dowiedzione jako poprawne w
-        arytmetyce liczb wymiernych — oparte na ciągach Beatty&rsquo;ego i
+        arytmetyce liczb wymiernych - oparte na ciągach Beatty&rsquo;ego i
         twierdzeniu o podziale Fraenkla. Odtwórz nagranie, a za każdym razem
         otrzymasz te same dane.
       </p>
@@ -40,7 +40,7 @@ og_image_height: 310
       <span class="sec-eyebrow">Idea</span>
       <h2>Scalenie, które zawsze można cofnąć</h2>
       <p class="body">
-        Regularny strumień to po prostu zegar — punkt startowy i stały odstęp
+        Regularny strumień to po prostu zegar - punkt startowy i stały odstęp
         między taktami. Dwa zegary działające z różną częstotliwością można
         utkać w jeden połączony strumień, zachowując kolejność, bez straty
         danych.
@@ -51,7 +51,7 @@ og_image_height: 310
             <h3>Dokładność</h3>
             <span class="feature-icon">{% include home/feature-icons.html icon="exact" %}</span>
           </div>
-          <p>Kluczowe operatory są dowiedzione w arytmetyce liczb wymiernych. Bez dryfu zmiennoprzecinkowego, bez przybliżeń — dla dowolnej pary regularnych odstępów.</p>
+          <p>Kluczowe operatory są dowiedzione w arytmetyce liczb wymiernych. Bez dryfu zmiennoprzecinkowego, bez przybliżeń - dla dowolnej pary regularnych odstępów.</p>
         </div>
         <div class="feature">
           <div class="feature-head">
@@ -65,7 +65,7 @@ og_image_height: 310
             <h3>Powtarzalność</h3>
             <span class="feature-icon">{% include home/feature-icons.html icon="replay" %}</span>
           </div>
-          <p>Odtwórz to samo nagranie dwa razy, a wynik będzie identyczny co do bitu — właściwość stale sprawdzana w CI.</p>
+          <p>Odtwórz to samo nagranie dwa razy, a wynik będzie identyczny co do bitu - właściwość stale sprawdzana w CI.</p>
         </div>
       </div>
       <p class="note">

@@ -20,7 +20,7 @@ inside WSL2 (Ubuntu):
    ```
 
 3. From the project root, install the project's gems (installed into
-   `vendor/bundle`, per `.bundle/config` — no `sudo` needed):
+   `vendor/bundle`, per `.bundle/config` - no `sudo` needed):
 
    ```bash
    bundle install

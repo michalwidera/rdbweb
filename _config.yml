@@ -1,5 +1,5 @@
-# RetractorDB — Jekyll config for the custom brand site.
-# This site no longer uses a remote theme (Minimal Mistakes) — chrome
+# RetractorDB - Jekyll config for the custom brand site.
+# This site no longer uses a remote theme (Minimal Mistakes) - chrome
 # lives in _layouts/default.html (inner pages) and _layouts/home.html
 # (homepage, rendered from index.md), sharing nav/footer/head partials
 # from _includes and tokens/rules from assets/css/site.css.
@@ -8,7 +8,7 @@ title: RetractorDB
 email: michal@widera.com.pl
 description: >-
   RetractorDB is an open-source stream database engine whose resampling
-  operators are proved exact — grounded in rational Beatty sequences and
+  operators are proved exact - grounded in rational Beatty sequences and
   Fraenkel's partition theorem.
 twitter_username: widera_michal
 github_username: michalwidera

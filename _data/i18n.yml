@@ -43,13 +43,13 @@ en:
     so win ticks at &Delta; = 1/20 and core[_] expands into both window slots.
     peak = MAX(win) keeps the larger one. gap[2] is a stream generator: $ = 0 and 1
     yield gap$0 = peak &minus; a and gap$1 = peak &minus; b.
-  home_legend_decl: "Declaration — source (DECLARE)"
+  home_legend_decl: "Declaration - source (DECLARE)"
   home_legend_query: "query (SELECT … STREAM)"
   home_legend_prog: "operator program of the query"
   home_legend_field: "field program"
   home_qrs_caption: "Pan–Tompkins QRS detector · MIT-BIH record 205"
   home_qrs_output_caption: "it_ecg_qrs · MIT-BIH 205 · 1404 records · &Delta; = 1/360 s"
-  home_qrs_cm: ["# 1. bandpass 5–15 Hz — 25-tap FIR convolution", "# 2. derivative — 5-tap FIR", "# 3. squaring", "# 4. moving-window integration — 30 samples", "# 5. adaptive threshold — 180-sample moving average (0.5 s)", "# output: centred ECG, envelope ×5, detection ×5"]
+  home_qrs_cm: ["# 1. bandpass 5–15 Hz - 25-tap FIR convolution", "# 2. derivative - 5-tap FIR", "# 3. squaring", "# 4. moving-window integration - 30 samples", "# 5. adaptive threshold - 180-sample moving average (0.5 s)", "# output: centred ECG, envelope ×5, detection ×5"]
   home_qrs_top: "qrs_out[0] = MLII − 900"
   home_qrs_bottom: "qrs_out[1] = mwi × 5   (qrs_out[2] is identical in this window)"
   home_qrs_x: "t [s] from the first qrs_out record"
@@ -102,13 +102,13 @@ pl:
     więc win ma &Delta; = 1/20, a core[_] rozwija się w oba sloty okna.
     peak = MAX(win) zachowuje większą z nich. gap[2] to generator strumieni:
     $ = 0 i 1 dają gap$0 = peak &minus; a oraz gap$1 = peak &minus; b.
-  home_legend_decl: "Declaration — źródło (DECLARE)"
+  home_legend_decl: "Declaration - źródło (DECLARE)"
   home_legend_query: "zapytanie (SELECT … STREAM)"
   home_legend_prog: "program operatorów zapytania"
   home_legend_field: "program pola"
   home_qrs_caption: "Detektor QRS Pan–Tompkinsa · rekord MIT-BIH 205"
   home_qrs_output_caption: "it_ecg_qrs · MIT-BIH 205 · 1404 rekordy · &Delta; = 1/360 s"
-  home_qrs_cm: ["# 1. filtr pasmowoprzepustowy 5–15 Hz — splot FIR, 25 odczepów", "# 2. różniczkowanie — FIR, 5 odczepów", "# 3. kwadrat", "# 4. całkowanie w oknie ruchomym — 30 próbek", "# 5. próg adaptacyjny — średnia ruchoma 180 próbek (0,5 s)", "# wyjście: EKG wycentrowane, obwiednia ×5, detekcja ×5"]
+  home_qrs_cm: ["# 1. filtr pasmowoprzepustowy 5–15 Hz - splot FIR, 25 odczepów", "# 2. różniczkowanie - FIR, 5 odczepów", "# 3. kwadrat", "# 4. całkowanie w oknie ruchomym - 30 próbek", "# 5. próg adaptacyjny - średnia ruchoma 180 próbek (0,5 s)", "# wyjście: EKG wycentrowane, obwiednia ×5, detekcja ×5"]
   home_qrs_top: "qrs_out[0] = MLII − 900"
   home_qrs_bottom: "qrs_out[1] = mwi × 5   (qrs_out[2] identyczne w tym oknie)"
   home_qrs_x: "t [s] od pierwszego rekordu qrs_out"

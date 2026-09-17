@@ -142,7 +142,7 @@ excerpt: "Połącz dwa ciągi o dwóch różnych odstępach i zobacz, jak operat
       var r2 = parseRational(document.getElementById('il-rate-b').value);
       var r3 = (r1 * r2) / (r1 + r2);
       // waga wyboru (udział B w scaleniu), inna niż połączony odstęp
-      // wyjściowy r3 — patrz dokumentacja implementacji
+      // wyjściowy r3 - patrz dokumentacja implementacji
       var delta = r2 / (r1 + r2);
 
       var combined = [];

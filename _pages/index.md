@@ -4,8 +4,8 @@ permalink: /
 lang: en
 lang_alt: /pl/
 title: "RetractorDB"
-seo_title: "RetractorDB — Exact streams. Deterministic by theorem."
-excerpt: "RetractorDB is an open-source Deterministic Edge Signal Processing Engine whose resampling operators are proved exact — grounded in rational Beatty sequences and Fraenkel's partition theorem."
+seo_title: "RetractorDB - Exact streams. Deterministic by theorem."
+excerpt: "RetractorDB is an open-source Deterministic Edge Signal Processing Engine whose resampling operators are proved exact - grounded in rational Beatty sequences and Fraenkel's partition theorem."
 og_image: "/assets/images/icon/ms-icon-310x310.png"
 og_image_width: 310
 og_image_height: 310
@@ -20,7 +20,7 @@ og_image_height: 310
       <p class="lede">
         RetractorDB merges and resamples regular time series with zero
         approximation error. Its core operators are proved correct over
-        rational arithmetic — grounded in Beatty sequences and
+        rational arithmetic - grounded in Beatty sequences and
         Fraenkel&rsquo;s partition theorem. Replay a recording, get the
         same bits. Every time.
       </p>
@@ -40,7 +40,7 @@ og_image_height: 310
       <span class="sec-eyebrow">The idea</span>
       <h2>A merge you can always undo</h2>
       <p class="body">
-        A regular stream is just a clock — a starting point and a fixed
+        A regular stream is just a clock - a starting point and a fixed
         interval between ticks. Two clocks running at different rates can be
         woven into one combined stream, in order, with nothing lost.
       </p>
@@ -50,7 +50,7 @@ og_image_height: 310
             <h3>Exact</h3>
             <span class="feature-icon">{% include home/feature-icons.html icon="exact" %}</span>
           </div>
-          <p>Core operators are proved correct over rational arithmetic. No floating-point drift, no approximation — for any pair of regular intervals.</p>
+          <p>Core operators are proved correct over rational arithmetic. No floating-point drift, no approximation - for any pair of regular intervals.</p>
         </div>
         <div class="feature">
           <div class="feature-head">
@@ -64,7 +64,7 @@ og_image_height: 310
             <h3>Replay-stable</h3>
             <span class="feature-icon">{% include home/feature-icons.html icon="replay" %}</span>
           </div>
-          <p>Replay the same recording twice and get the identical result down to the bit — a property exercised continuously in CI.</p>
+          <p>Replay the same recording twice and get the identical result down to the bit - a property exercised continuously in CI.</p>
         </div>
       </div>
       <p class="note">
@@ -112,7 +112,7 @@ og_image_height: 310
         </div>
         <div class="bin">
           <h3><span>x</span>qry</h3>
-          <p>Queries running streams live over IPC — raw or formatted, ready to pipe into gnuplot.</p>
+          <p>Queries running streams live over IPC - raw or formatted, ready to pipe into gnuplot.</p>
         </div>
         <div class="bin">
           <h3><span>x</span>trdb</h3>
@@ -155,7 +155,7 @@ og_image_height: 310
         </li>
         <li>
           <span class="tl-year">1969</span><span class="tl-dot"></span>
-          <p>Fraenkel generalizes the partition criterion to <strong>rational</strong> parameters — the <a href="https://planetmath.org/fraenkelspartitiontheorem">computable case</a>.</p>
+          <p>Fraenkel generalizes the partition criterion to <strong>rational</strong> parameters - the <a href="https://planetmath.org/fraenkelspartitiontheorem">computable case</a>.</p>
         </li>
         <li>
           <span class="tl-year">2003</span><span class="tl-dot"></span>
