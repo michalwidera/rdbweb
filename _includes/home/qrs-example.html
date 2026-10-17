@@ -13,9 +13,9 @@ Wygenerowane z artefaktow retractordb (nie edytowac recznie liczb):
   <div class="code-panel" role="tabpanel" data-tab="query" data-caption="{{ t.home_qrs_caption }}">
     <div class="code code-sm">
       <div><span class="kw">DEFAULT</span> <span class="kw">VOLATILE</span></div>
-      <div><span class="kw">DECLARE</span> MLII INTEGER, V1 INTEGER <span class="kw">STREAM</span> ecg, 1/360 <span class="kw">FILE</span> 'rec205'</div>
-      <div><span class="kw">DECLARE</span> bp_coef INTEGER[25] <span class="kw">STREAM</span> bpf, 1 <span class="kw">FILE</span> 'bp_coef.txt'</div>
-      <div><span class="kw">DECLARE</span> d_coef INTEGER[5] <span class="kw">STREAM</span> df, 1 <span class="kw">FILE</span> 'd_coef.txt'</div>
+      <div><span class="kw">DECLARE</span> MLII INTEGER, V1 INTEGER <span class="kw">STREAM</span> ecg, 1/360 <span class="kw">BINFILE</span> 'rec205'</div>
+      <div><span class="kw">DECLARE</span> bp_coef INTEGER[25] <span class="kw">STREAM</span> bpf, 1 <span class="kw">TEXTFILE</span> 'bp_coef.txt'</div>
+      <div><span class="kw">DECLARE</span> d_coef INTEGER[5] <span class="kw">STREAM</span> df, 1 <span class="kw">TEXTFILE</span> 'd_coef.txt'</div>
       <div><span class="kw">SELECT</span> ecg.MLII <span class="kw">STREAM</span> mlii <span class="kw">FROM</span> ecg</div>
       <div class="gap"></div>
       <div class="cm">{{ t.home_qrs_cm[0] }}</div>
