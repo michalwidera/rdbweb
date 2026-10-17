@@ -108,39 +108,39 @@ Wygenerowane z artefaktow retractordb (nie edytowac recznie liczb):
       <p class="code-note">{{ t.home_lang_showcase_note }}</p>
     </div>
   </div>
-</div>
 
-<div class="code-card" id="rql-sources">
-  <div class="code-bar">
-    <span class="code-caption">{% if include.lang == 'pl' %}RQL: rodzaje źródeł{% else %}RQL: source kinds{% endif %}</span>
+  <div class="code-card code-card-soft" id="rql-sources">
+    <div class="code-bar">
+      <span class="code-caption">{% if include.lang == 'pl' %}RQL: rodzaje źródeł{% else %}RQL: source kinds{% endif %}</span>
+    </div>
+    <div class="code code-sm">
+      <div class="cm">{% if include.lang == 'pl' %}// BINFILE: surowe rekordy binarne z pliku zwykłego{% else %}// BINFILE: raw binary records from a regular file{% endif %}</div>
+      <div><span class="kw">DECLARE</span> sample <span class="kw">INTEGER</span> <span class="kw">STREAM</span> recording, 1/100 <span class="kw">BINFILE</span> 'samples.dat' <span class="kw">ONESHOT</span></div>
+      <div class="gap"></div>
+      <div class="cm">{% if include.lang == 'pl' %}// TEXTFILE: wartości tekstowe z pliku zwykłego{% else %}// TEXTFILE: text values from a regular file{% endif %}</div>
+      <div><span class="kw">DECLARE</span> gain <span class="kw">FLOAT</span> <span class="kw">STREAM</span> calibration, 1 <span class="kw">TEXTFILE</span> 'calibration.txt'</div>
+      <div class="gap"></div>
+      <div class="cm">{% if include.lang == 'pl' %}// DEVICE: rekordy binarne z urządzenia znakowego lub FIFO{% else %}// DEVICE: binary records from a character device or FIFO{% endif %}</div>
+      <div><span class="kw">DECLARE</span> reading <span class="kw">INTEGER</span> <span class="kw">STREAM</span> sensor, 1/100 <span class="kw">DEVICE</span> '/tmp/sensor.fifo' <span class="kw">TIMEOUT</span> 1/1000</div>
+    </div>
+    <p class="code-note">
+      {% if include.lang == 'pl' %}
+        Rodzaj źródła wybiera słowo kluczowe, niezależnie od rozszerzenia pliku.
+        <code>TEXTFILE</code> czyta wartości rozdzielone białymi znakami;
+        token <code>NULL</code> oznacza brak wartości.
+        <code>ONESHOT</code> wyłącza zapętlanie pliku.
+        <code>TIMEOUT</code> ustala termin odczytu tylko dla <code>DEVICE</code>,
+        w sekundach (tu 1 ms); brak pełnego rekordu w terminie daje rekord <code>NULL</code>.
+        W trybie <code>--no-clock</code> (<code>-f</code>) odczyt jest natychmiastowy, bez czekania.
+      {% else %}
+        The keyword selects the source kind, independently of the file extension.
+        <code>TEXTFILE</code> reads whitespace-separated values;
+        the <code>NULL</code> token marks a missing value.
+        <code>ONESHOT</code> disables file looping.
+        <code>TIMEOUT</code> sets a read deadline for <code>DEVICE</code> only,
+        in seconds (here 1 ms); a missing complete record at the deadline yields a <code>NULL</code> record.
+        In <code>--no-clock</code> (<code>-f</code>) mode, reads are immediate, without waiting.
+      {% endif %}
+    </p>
   </div>
-  <div class="code code-sm">
-    <div class="cm">{% if include.lang == 'pl' %}// BINFILE: surowe rekordy binarne z pliku zwykłego{% else %}// BINFILE: raw binary records from a regular file{% endif %}</div>
-    <div><span class="kw">DECLARE</span> sample <span class="kw">INTEGER</span> <span class="kw">STREAM</span> recording, 1/100 <span class="kw">BINFILE</span> 'samples.dat' <span class="kw">ONESHOT</span></div>
-    <div class="gap"></div>
-    <div class="cm">{% if include.lang == 'pl' %}// TEXTFILE: wartości tekstowe z pliku zwykłego{% else %}// TEXTFILE: text values from a regular file{% endif %}</div>
-    <div><span class="kw">DECLARE</span> gain <span class="kw">FLOAT</span> <span class="kw">STREAM</span> calibration, 1 <span class="kw">TEXTFILE</span> 'calibration.txt'</div>
-    <div class="gap"></div>
-    <div class="cm">{% if include.lang == 'pl' %}// DEVICE: rekordy binarne z urządzenia znakowego lub FIFO{% else %}// DEVICE: binary records from a character device or FIFO{% endif %}</div>
-    <div><span class="kw">DECLARE</span> reading <span class="kw">INTEGER</span> <span class="kw">STREAM</span> sensor, 1/100 <span class="kw">DEVICE</span> '/tmp/sensor.fifo' <span class="kw">TIMEOUT</span> 1/1000</div>
-  </div>
-  <p class="code-note">
-    {% if include.lang == 'pl' %}
-      Rodzaj źródła wybiera słowo kluczowe, niezależnie od rozszerzenia pliku.
-      <code>TEXTFILE</code> czyta wartości rozdzielone białymi znakami;
-      token <code>NULL</code> oznacza brak wartości.
-      <code>ONESHOT</code> wyłącza zapętlanie pliku.
-      <code>TIMEOUT</code> ustala termin odczytu tylko dla <code>DEVICE</code>,
-      w sekundach (tu 1 ms); brak pełnego rekordu w terminie daje rekord <code>NULL</code>.
-      W trybie <code>--no-clock</code> (<code>-f</code>) odczyt jest natychmiastowy, bez czekania.
-    {% else %}
-      The keyword selects the source kind, independently of the file extension.
-      <code>TEXTFILE</code> reads whitespace-separated values;
-      the <code>NULL</code> token marks a missing value.
-      <code>ONESHOT</code> disables file looping.
-      <code>TIMEOUT</code> sets a read deadline for <code>DEVICE</code> only,
-      in seconds (here 1 ms); a missing complete record at the deadline yields a <code>NULL</code> record.
-      In <code>--no-clock</code> (<code>-f</code>) mode, reads are immediate, without waiting.
-    {% endif %}
-  </p>
 </div>
