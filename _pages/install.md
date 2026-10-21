@@ -126,7 +126,7 @@ excerpt: "Install, update or remove RetractorDB from a GitHub release on x86-64 
         </div>
         <div class="code">
           <div>curl -fsSL https://retractordb.com/install.sh | bash -s -- list</div>
-          <div>curl -fsSL https://retractordb.com/install.sh | bash -s -- install --version 0.1.11 --user</div>
+          <div>curl -fsSL https://retractordb.com/install.sh | bash -s -- install --version 0.1.12 --user</div>
           <div>curl -fsSL https://retractordb.com/install.sh | bash -s -- upgrade --user</div>
           <div>curl -fsSL https://retractordb.com/install.sh | bash -s -- status --user</div>
           <div>curl -fsSL https://retractordb.com/install.sh | bash -s -- uninstall --user</div>

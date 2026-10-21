@@ -19,7 +19,7 @@ has_tty() { ( : > /dev/tty ) 2>/dev/null; }
 usage() {
   cat <<'HELP'
 Usage: bash install.sh [install|upgrade|uninstall|list|status] [options]
-  --version VERSION   Install a published stable release (for example 0.1.11)
+  --version VERSION   Install a published stable release (for example 0.1.12)
   --user              Install in ~/.local
   --system            Install in /usr/local (run as root)
   --prefix PATH       Use an absolute custom prefix
